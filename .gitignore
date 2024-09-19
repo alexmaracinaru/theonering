@@ -15,9 +15,3 @@ Thumbs.db
 
 # Ignore node_modules for Node.js projects
 node_modules/
-
-# Ignore large media files (if you prefer to handle them separately)
-*.mp4
-*.mp3
-*.wav
-*.zip
