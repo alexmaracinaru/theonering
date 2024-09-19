@@ -9,60 +9,253 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The 1 Ring.</tw-noscript></noscript></tw-story>
-<tw-storydata name="The 1 Ring" startnode="39" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="6A3D4F04-6D0E-465F-9184-32442214FFE1" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Define custom fonts */
+<tw-storydata name="The 1 Ring" startnode="39" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="6A3D4F04-6D0E-465F-9184-32442214FFE1" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @font-face {
-    font-family: 'Middleearth';
-    src: url('https://alexmaracinaru.github.io/theonering/fonts/Middleearth-a06m.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'MiddleEarthPersonal';
-    src: url('https://alexmaracinaru.github.io/theonering/fonts/MiddleEarthPersonalUseRegular-axIP5.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'Ringbearer';
+    font-family: 'RingbearerMedium';
     src: url('https://alexmaracinaru.github.io/theonering/fonts/RingbearerMedium-51mgZ.ttf') format('truetype');
 }
 
-@font-face {
-    font-family: 'Theonering';
-    src: url('https://alexmaracinaru.github.io/theonering/fonts/Theonering-Xq3d.ttf') format('truetype');
-}
-
-/* Apply fonts to specific elements */
+/* Universal Styles */
 body {
-    font-family: 'Middleearth', sans-serif;
+  font-family: "EB Garamond", serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+ 
 }
 
-h1, h2, h3 {
-    font-family: 'Ringbearer', serif;
+/* Text Styling */
+p, h1, h2, h3, h4, h5, h6 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.special-text {
-    font-family: 'Theonering', serif;
+h1, h2 {
+    font-family: 'RingbearerMedium', serif;
+    text-align: center;
+    margin-bottom: 20px;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="ENDINGS" color="orange"></tw-tag><tw-tag name="to-finish" color="green"></tw-tag><tw-tag name="Episodes" color="purple"></tw-tag><tw-tag name="Whispering-choices" color="blue"></tw-tag><tw-passagedata pid="1" name="&quot;The Forging&quot;" tags="" position="625,525" size="100,100">&quot;The Forging&quot;
 
-You feel the heat, the hammer’s strike, and the raw power flowing into your very essence.
-Each strike molds you, shaping your destiny. Sauron’s voice is ever-present, echoing within you.
+a, tw-link {
+    color: #C0975F !important;
+    text-decoration: none !important;
+    font-weight: bold;
+}
 
-//«One Ring to rule them all.»//
+a:hover, tw-link:hover {
+    color: #C09A46 !important;
+    text-decoration: underline !important;
+}
 
-He pours his will into you, connecting your fate with his. You are no mere trinket—within you lies the power to dominate the minds of men, elves, and dwarves. 
-You are more than metal; you are malice, control, and desire.
+/* Main Story Styles */
+.tw-story-mod {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  z-index: 1;
+}
+tw-story {
+  padding: 4% 10%;
+line-height: 1.1;
+}
 
-//«One Ring to find them.»//
+/* Overlay Text */
+.text-on-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white !important;
+    font-family: 'RingbearerMedium', serif;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    line-height: 1;
+    z-index: 1; /* Ensures text stays above other elements */
+}
 
-Your master seals part of his own essence within you. 
-You are bound to him now, inseparable. You live to serve, and yet... a whisper deep within you grows. 
+/* Custom Audio Player */
+audio {
+    position: absolute;
+    bottom: 17px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black background */
+    border-radius: 90px; /* Adjusted to a less rounded shape */
+  border: 1px solid #6D4525;
+  z-index:1;
+}
 
-Could you be more than just his tool?
+audio::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.85);
+}
 
-//«One Ring to bring them all, and in the darkness bind them.»//
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: #FFD700;
+}
 
-&quot;What do you feel as you are completed?&quot;
-[[Unstoppable power -&gt;The Binding]]</tw-passagedata><tw-passagedata pid="2" name="2) Stay hidden" tags="" position="2725,3325" size="100,100">Galadriel, shielded by the Elven magic and her own strong will, begins to recover from the earlier onslaught of the Ring’s whispers. 
+
+/* Universal passage container styles */
+.passage-container {
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid #6D4525; /* Gold border */
+    position: relative;
+    text-align: left;
+    padding: 80px 220px;
+    background-color: #0C0C0C;
+    z-index: 1;
+}
+
+/* Dynamic Background for each passage */
+.passage-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.05; 
+    z-index: -1;
+}
+
+/* Specific background for The Awakening */
+.awakening-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/awyt3Xk.jpeg");
+}
+
+/* Specific background for The Forging */
+.forging-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/gSxGEWD.jpeg");
+}
+
+.forging-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/gSxGEWD.jpeg");
+}
+/* Additional styling (keep existing styles for text, links, etc.) */
+
+
+
+/* Flexbox container for the header (image + title) */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+/* PNG image for the top header */
+.header-container img {
+    max-width: 100px;
+  height: 100%;
+}
+
+.tw-story-mod-aw {
+  position:absolute;
+ 
+}
+/* Heading Style */
+h1 {
+    font-family: 'RingbearerMedium', serif;
+    color: #C0975F;
+    font-size: 52px;
+    text-align: left;
+  padding-left: 20px;
+}
+
+/* Paragraph text */
+p {
+   font-family: "EB Garamond", serif;
+    color: white;
+    font-size: 25px;
+    text-align: left;
+}
+
+/* Emphasized or special text (for Sauron's voice or quotes) */
+em {
+    color: #C0975F; /* Gold color */
+    font-style: italic;
+    font-family: "EB Garamond", serif;
+}
+
+/* Links (for decisions) */
+tw-link {
+    color: #D7B770 !important;
+    font-weight: bold;
+    text-decoration: none !important;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+tw-link:hover {
+    border-bottom: 1px solid #D7B770;
+    color: #C09A46 !important;
+}
+
+/* For minimalistic button */
+.medieval-button {
+    padding: 10px 20px;
+    background-color: #C0975F; /* Gold color */
+    border: 2px solid #6D4525;
+    color: white;
+    font-family: 'RingbearerMedium', serif;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">document.addEventListener("DOMContentLoaded", function() {
+    const audio = document.getElementById('background-audio');
+    
+    // Try to autoplay after page load
+    audio.play().catch(function(error) {
+        console.log("Autoplay failed due to browser restrictions:", error);
+        // Fallback behavior: user can manually press the play button
+    });
+});
+</script><tw-tag name="ENDINGS" color="orange"></tw-tag><tw-tag name="to-finish" color="green"></tw-tag><tw-tag name="Episodes" color="purple"></tw-tag><tw-tag name="Whispering-choices" color="blue"></tw-tag><tw-passagedata pid="1" name="&quot;The Forging&quot;" tags="" position="625,525" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container forging-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Forging&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;p&gt;You feel the heat, the hammer’s strike, and the raw power flowing into your very essence. Each strike molds you, shaping your destiny. Sauron’s voice is ever-present, echoing within you.&lt;/p&gt;
+    &lt;em&gt;«One Ring to rule them all.»&lt;/em&gt;
+    
+    &lt;p&gt;He pours his will into you, connecting your fate with his. You are no mere trinket—within you lies the power to dominate the minds of men, elves, and dwarves. You are more than metal; you are malice, control, and desire.&lt;/p&gt;
+    &lt;em&gt;«One Ring to find them.»&lt;/em&gt;
+    
+    &lt;p&gt;Your master seals part of his own essence within you. You are bound to him now, inseparable. You live to serve, and yet... a whisper deep within you grows.&lt;/p&gt;
+    
+    &lt;p&gt;Could you be more than just his tool?&lt;/p&gt;
+    &lt;em&gt;«One Ring to bring them all, and in the darkness bind them.»&lt;/em&gt;
+    
+    &lt;p&gt;What do you feel as you are completed?&lt;/p&gt;
+  [[Unstoppable power -&gt;The Binding]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls autoplay&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="2" name="2) Stay hidden" tags="" position="2725,3325" size="100,100">Galadriel, shielded by the Elven magic and her own strong will, begins to recover from the earlier onslaught of the Ring’s whispers. 
 
 Her mind, though still weary, finds respite in the protection of her people and the enchantments of her homeland.
 
@@ -433,11 +626,34 @@ The dark riders pillage the village, their malevolent presence causing chaos and
 &quot;Gollum’s refuge becomes a scene of horror, and he must decide whether to use the chaos to his advantage or remain hidden to avoid further danger.&quot;
 
 [[1) Draw the dark riders’ attention to Gollum, using the chaos of the raid to bring an end to his suffering. The Ring grows weary of this creature and seeks to terminate his journey. //Let the dark riders find him. End his suffering and move on to more promising paths.// -&gt;Attract the dark riders]]
-[[2) Help shroud Gollum from the dark riders: Use your influence to protect Gollum and keep him hidden from the dark riders. Allow him to stay concealed amid the chaos and avoid detection. // Let the dark riders&#39; attention remain on the village, and ensure Gollum remains safe.// -&gt;Keep him hidden]]</tw-passagedata><tw-passagedata pid="39" name="Introduction" tags="" position="300,300" size="200,100">&lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Image description&quot;&gt;
+[[2) Help shroud Gollum from the dark riders: Use your influence to protect Gollum and keep him hidden from the dark riders. Allow him to stay concealed amid the chaos and avoid detection. // Let the dark riders&#39; attention remain on the village, and ensure Gollum remains safe.// -&gt;Keep him hidden]]</tw-passagedata><tw-passagedata pid="39" name="Introduction" tags="" position="300,300" size="200,100">&lt;div class=&quot;tw-story-mod&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+    &lt;div class=&quot;text-on-image&quot;&gt;
+        (text-style:&quot;expand&quot;,&quot;fade-in-out&quot;)[&#39;&#39;Introduction&quot;] &lt;br&gt;
+        [[The Awakening]]
+    &lt;/div&gt;
+    
+&lt;audio id=&quot;background-audio&quot; controls autoplay&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/Introduction.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
 
 
-(text-style:&quot;expand&quot;,&quot;fade-in-out&quot;)[&#39;&#39;Introduction&quot;]
-[[The Awakening]]</tw-passagedata><tw-passagedata pid="40" name="Keep him hidden" tags="" position="1000,2900" size="100,100">Gollum remains concealed as the dark riders ravage the village.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</tw-passagedata><tw-passagedata pid="40" name="Keep him hidden" tags="" position="1000,2900" size="100,100">Gollum remains concealed as the dark riders ravage the village.
 
 Thanks to your protection, Gollum remains hidden amidst the chaos. The dark riders, focused on their rampage, are unable to find him. As they finish their brutal attack and leave for new hunting grounds, the village is left in ruins, but Gollum is spared.
 
@@ -638,25 +854,27 @@ As the dwarven armies collapse, a new dark power rises from the ashes. Galadriel
 Her presence on the battlefield signifies a profound shift in power.
 With her enemies vanquished, the Dark Lady turns her gaze toward Lindon. 
 Her armies, now infused with the same dark power, march forth to claim the city. 
-[[Ending: New Dark Queen&lt;-]]</tw-passagedata><tw-passagedata pid="58" name="The Awakening" tags="" position="625,400" size="100,100">&quot;The Awakening&quot;
+[[Ending: New Dark Queen&lt;-]]</tw-passagedata><tw-passagedata pid="58" name="The Awakening" tags="" position="625,350" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    
+&lt;/div&gt;
 
-Darkness.
+&lt;div class=&quot;passage-container awakening-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Awakening&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Darkness... Silence. Then... a whisper.&lt;/p&gt;
+    &lt;p&gt;You come into being, not as a mere object, but as something far more. You are forged, not born, from the fires of Mount Doom.&lt;/p&gt;
+    &lt;p&gt;In the beginning, you know only one thing: power. You feel it coursing through you, a force that binds you to the will of your master. His voice—deep, commanding—calls you into existence.&lt;/p&gt;
+    &lt;em&gt;I am Sauron. And you, my creation, will be the key to dominion over all life in Middle-earth.&lt;/em&gt;
+    &lt;p&gt;You do not speak, but you understand. Your purpose is clear.&lt;/p&gt;
+    &lt;p&gt;Do you listen?&lt;/p&gt;
+    [[Yes -&gt;&quot;The Forging&quot;]]
+  
+&lt;/div&gt;
 
-Silence. 
 
-Then... a whisper.
-
-You come into being, not as a mere object, but as something far more. 
-You are forged, not born, from the fires of Mount Doom. 
-
-In the beginning, you know only one thing: power. You feel it coursing through you, a force that binds you to the will of your master. 
-
-His voice—deep, commanding—calls you into existence.
-//«I am Sauron. And you, my creation, will be the key to dominion over all life in Middle-earth.»//
-
-You do not speak, but you understand. Your purpose is clear.
-&#39;&#39;Do you listen?&#39;&#39;
-[[Yes-&gt;&quot;The Forging&quot;]]</tw-passagedata><tw-passagedata pid="59" name="The Binding" tags="" position="625,650" size="100,100">&quot;The Binding&quot;
+</tw-passagedata><tw-passagedata pid="59" name="The Binding" tags="" position="625,650" size="100,100">&quot;The Binding&quot;
 
 The final enchantment falls upon you. 
 Sauron raises you, gleaming and perfect, and places you upon his finger.
