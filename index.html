@@ -9,7 +9,40 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The 1 Ring.</tw-noscript></noscript></tw-story>
-<tw-storydata name="The 1 Ring" startnode="39" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="6A3D4F04-6D0E-465F-9184-32442214FFE1" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="ENDINGS" color="orange"></tw-tag><tw-tag name="to-finish" color="green"></tw-tag><tw-tag name="Episodes" color="purple"></tw-tag><tw-tag name="Whispering-choices" color="blue"></tw-tag><tw-passagedata pid="1" name="&quot;The Forging&quot;" tags="" position="625,525" size="100,100">&quot;The Forging&quot;
+<tw-storydata name="The 1 Ring" startnode="39" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="6A3D4F04-6D0E-465F-9184-32442214FFE1" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Define custom fonts */
+@font-face {
+    font-family: 'Middleearth';
+    src: url('https://alexmaracinaru.github.io/theonering/fonts/Middleearth-a06m.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MiddleEarthPersonal';
+    src: url('https://alexmaracinaru.github.io/theonering/fonts/MiddleEarthPersonalUseRegular-axIP5.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Ringbearer';
+    src: url('https://alexmaracinaru.github.io/theonering/fonts/RingbearerMedium-51mgZ.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Theonering';
+    src: url('https://alexmaracinaru.github.io/theonering/fonts/Theonering-Xq3d.ttf') format('truetype');
+}
+
+/* Apply fonts to specific elements */
+body {
+    font-family: 'Middleearth', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Ringbearer', serif;
+}
+
+.special-text {
+    font-family: 'Theonering', serif;
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="ENDINGS" color="orange"></tw-tag><tw-tag name="to-finish" color="green"></tw-tag><tw-tag name="Episodes" color="purple"></tw-tag><tw-tag name="Whispering-choices" color="blue"></tw-tag><tw-passagedata pid="1" name="&quot;The Forging&quot;" tags="" position="625,525" size="100,100">&quot;The Forging&quot;
 
 You feel the heat, the hammer’s strike, and the raw power flowing into your very essence.
 Each strike molds you, shaping your destiny. Sauron’s voice is ever-present, echoing within you.
@@ -400,7 +433,10 @@ The dark riders pillage the village, their malevolent presence causing chaos and
 &quot;Gollum’s refuge becomes a scene of horror, and he must decide whether to use the chaos to his advantage or remain hidden to avoid further danger.&quot;
 
 [[1) Draw the dark riders’ attention to Gollum, using the chaos of the raid to bring an end to his suffering. The Ring grows weary of this creature and seeks to terminate his journey. //Let the dark riders find him. End his suffering and move on to more promising paths.// -&gt;Attract the dark riders]]
-[[2) Help shroud Gollum from the dark riders: Use your influence to protect Gollum and keep him hidden from the dark riders. Allow him to stay concealed amid the chaos and avoid detection. // Let the dark riders&#39; attention remain on the village, and ensure Gollum remains safe.// -&gt;Keep him hidden]]</tw-passagedata><tw-passagedata pid="39" name="Introduction" tags="" position="300,300" size="200,100">(text-style:&quot;expand&quot;,&quot;fade-in-out&quot;)[&#39;&#39;Introduction&quot;]
+[[2) Help shroud Gollum from the dark riders: Use your influence to protect Gollum and keep him hidden from the dark riders. Allow him to stay concealed amid the chaos and avoid detection. // Let the dark riders&#39; attention remain on the village, and ensure Gollum remains safe.// -&gt;Keep him hidden]]</tw-passagedata><tw-passagedata pid="39" name="Introduction" tags="" position="300,300" size="200,100">&lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Image description&quot;&gt;
+
+
+(text-style:&quot;expand&quot;,&quot;fade-in-out&quot;)[&#39;&#39;Introduction&quot;]
 [[The Awakening]]</tw-passagedata><tw-passagedata pid="40" name="Keep him hidden" tags="" position="1000,2900" size="100,100">Gollum remains concealed as the dark riders ravage the village.
 
 Thanks to your protection, Gollum remains hidden amidst the chaos. The dark riders, focused on their rampage, are unable to find him. As they finish their brutal attack and leave for new hunting grounds, the village is left in ruins, but Gollum is spared.
