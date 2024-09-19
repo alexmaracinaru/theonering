@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The 1 Ring.</tw-noscript></noscript></tw-story>
-<tw-storydata name="The 1 Ring" startnode="39" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="6A3D4F04-6D0E-465F-9184-32442214FFE1" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+<tw-storydata name="The 1 Ring" startnode="39" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="6A3D4F04-6D0E-465F-9184-32442214FFE1" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @font-face {
     font-family: 'RingbearerMedium';
     src: url('https://alexmaracinaru.github.io/theonering/fonts/RingbearerMedium-51mgZ.ttf') format('truetype');
@@ -23,7 +23,9 @@ body {
     padding: 0;
  
 }
-
+tw-icon {
+z-index: +99;
+}
 /* Text Styling */
 p, h1, h2, h3, h4, h5, h6 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -73,7 +75,7 @@ line-height: 1.1;
     transform: translate(-50%, -50%);
     color: white !important;
     font-family: 'RingbearerMedium', serif;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
     width: 100%;
     line-height: 1;
@@ -83,7 +85,7 @@ line-height: 1.1;
 /* Custom Audio Player */
 audio {
     position: absolute;
-    bottom: 17px;
+    bottom: 47px;
     left: 50%;
     transform: translateX(-50%);
     width: 300px;
@@ -103,7 +105,10 @@ audio::-webkit-media-controls-current-time-display,
 audio::-webkit-media-controls-time-remaining-display {
     color: #FFD700;
 }
-
+.intro-audio {
+  bottom: 1px;
+    left: 50%;
+}
 
 /* Universal passage container styles */
 .passage-container {
@@ -131,22 +136,230 @@ audio::-webkit-media-controls-time-remaining-display {
     z-index: -1;
 }
 
-/* Specific background for The Awakening */
+.vault-sealed-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/galadriel_prisoner.jpg");
+} 
+.galadriel-prisoner-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/galadriel_prisoner.jpg");
+}
+
+.galadriel-tension-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/galadriel-hall-tension.jpg");
+}
+
+.galadriel-hall-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/galadriel-hall.jpg");
+}
+
+.episode-2-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/episode2.jpg");
+}
+
+.herumor-victory-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/victory.jpg");
+}
+
+.herumor-throne-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/throne.jpg");
+}
+
+.herumor-mordor-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/mordor.jpg");
+}
+
+.herumor-battle-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/herumor-battle.jpg");
+}
+
+.dark-reign-end-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/dark-reign-end.jpg");
+}
+
+.herumor-defeat-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/herumor-defeat.jpg");
+}
+
+.herumor-battle-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/battle-dwarves.jpg");
+}
+
+.herumor-dwarves-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/dwarves-march.jpg");
+}
+
+.herumor-reign-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/herumor-reign.jpg");
+}
+
+.episode-two-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/episode2.jpg");
+}
+
+.galadriel-falls-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/GaladrielFalls.jpg");
+}
+
+.leave-it-be-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/LeaveItBe.jpg");
+}
+
+.flee-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/FleeBattle.jpg");
+}
+
+.attack-village-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/ElvenVillageAttack.jpg");
+}
+
+.search-land-elves-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/ElvenVillage.jpg");
+}
+
+.attract-black-numenoreans-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/black_numenoreans.jpeg");
+}
+.prepare-return-sauron-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/HerumorBackground.jpg");
+}
+
+
+.sinking-obsession-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/two_forces.jpeg"); 
+}
+
+
+.herumor-claim-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/herumor_claim.jpeg"); 
+}
+
+.herumor-hunt-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/herumor_hunt.jpeg"); 
+}
+
+.gollum-concealed-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/gollum_concealed_village.jpeg"); 
+}
+
+.gollum-dead-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/gollum_dead_ending.jpeg");
+}
+
+.village-raid-ending-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/village_raid_ending.jpeg");
+}
+
+.village-raid-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/village_raid_bg.jpeg"); 
+}
+
+.gollum-end-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/gollum_end_bg.jpg");
+}
+
+.gollum-death-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/gollum-death.jpeg");
+}
+
+.passage-container.galadriel-battle-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/galadriel-battle.jpeg");
+}
+
+.gollum-hidden-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/gollum-hidden.jpeg");
+}
+
+.elves-hidden-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/cbAPgXj.jpeg");
+}
+
+.elves-defiance-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/galadriel-battle.jpeg");
+}
+
+.elves-corruption-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/1296126.jpg");
+}
+
+.passage-container.gollum-lindon-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/gollum-lindon-outskirts.jpeg");
+}
+
 .awakening-bg::before {
     background-image: url("https://alexmaracinaru.github.io/theonering/media/awyt3Xk.jpeg");
 }
 
-/* Specific background for The Forging */
-.forging-bg::before {
-    background-image: url("https://alexmaracinaru.github.io/theonering/media/gSxGEWD.jpeg");
-}
 
 .forging-bg::before {
     background-image: url("https://alexmaracinaru.github.io/theonering/media/gSxGEWD.jpeg");
 }
-/* Additional styling (keep existing styles for text, links, etc.) */
+
+.binding-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/1296126.jpg");
+}
+
+.war-begins-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/cbAPgXj.jpeg");
+}
 
 
+.fall-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/wP5ofku.jpeg");
+}
+
+.episode1-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/episode1-bg.jpeg");
+}
+
+
+.darkness-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/1296125.jpg");
+}
+
+
+.so-close-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/tplNNEy.jpeg");
+}
+
+
+.gollum-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/DsYnApQ.jpeg");
+}
+
+.gollum-spiral-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/gSxGEWD.jpeg");
+}
+
+
+.mordor-journey-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/1296126.jpg");
+}
+
+.mordor-desperation-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/wP5ofku.jpeg");
+}
+
+.mordor-escape-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/1296125.jpg");
+}
+
+
+.middle-earth-travel-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/episode1-bg.jpeg");
+}
+
+
+.cave-journey-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/tplNNEy.jpeg");
+}
+
+
+.deeper-cave-journey-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/DsYnApQ.jpeg");
+}
+
+.gollum-protected-bg::before {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/gSxGEWD.jpeg");
+}
 
 /* Flexbox container for the header (image + title) */
 .header-container {
@@ -188,12 +401,13 @@ em {
     color: #C0975F; /* Gold color */
     font-style: italic;
     font-family: "EB Garamond", serif;
+  font-size: 25px;
 }
 
 /* Links (for decisions) */
 tw-link {
-    color: #D7B770 !important;
-    font-weight: bold;
+    color: #C0975F; !important;
+  font-family: 'RingbearerMedium', serif;
     text-decoration: none !important;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.3s ease;
@@ -207,7 +421,7 @@ tw-link:hover {
 /* For minimalistic button */
 .medieval-button {
     padding: 10px 20px;
-    background-color: #C0975F; /* Gold color */
+    color: #C0975F; /* Gold color */
     border: 2px solid #6D4525;
     color: white;
     font-family: 'RingbearerMedium', serif;
@@ -229,6 +443,7 @@ tw-link:hover {
     });
 });
 </script><tw-tag name="ENDINGS" color="orange"></tw-tag><tw-tag name="to-finish" color="green"></tw-tag><tw-tag name="Episodes" color="purple"></tw-tag><tw-tag name="Whispering-choices" color="blue"></tw-tag><tw-passagedata pid="1" name="&quot;The Forging&quot;" tags="" position="625,525" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+ &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;passage-container forging-bg&quot;&gt;
@@ -237,224 +452,499 @@ tw-link:hover {
         &lt;h1&gt;The Forging&lt;/h1&gt;
     &lt;/div&gt;
     &lt;p&gt;You feel the heat, the hammer’s strike, and the raw power flowing into your very essence. Each strike molds you, shaping your destiny. Sauron’s voice is ever-present, echoing within you.&lt;/p&gt;
-    &lt;em&gt;«One Ring to rule them all.»&lt;/em&gt;
+    &lt;em&gt;One Ring to rule them all.&lt;/em&gt;
     
     &lt;p&gt;He pours his will into you, connecting your fate with his. You are no mere trinket—within you lies the power to dominate the minds of men, elves, and dwarves. You are more than metal; you are malice, control, and desire.&lt;/p&gt;
-    &lt;em&gt;«One Ring to find them.»&lt;/em&gt;
+    &lt;em&gt;One Ring to find them.&lt;/em&gt;
     
-    &lt;p&gt;Your master seals part of his own essence within you. You are bound to him now, inseparable. You live to serve, and yet... a whisper deep within you grows.&lt;/p&gt;
-    
-    &lt;p&gt;Could you be more than just his tool?&lt;/p&gt;
-    &lt;em&gt;«One Ring to bring them all, and in the darkness bind them.»&lt;/em&gt;
+    &lt;p&gt;Your master seals part of his own essence within you. You are bound to him now, inseparable. You live to serve, and yet... a whisper deep within you grows. Could you be more than just his tool?&lt;/p&gt;
+    &lt;em&gt;One Ring to bring them all, and in the darkness bind them.&lt;/em&gt;
     
     &lt;p&gt;What do you feel as you are completed?&lt;/p&gt;
   [[Unstoppable power -&gt;The Binding]]
 &lt;/div&gt;
 
-&lt;audio id=&quot;background-audio&quot; controls autoplay&gt;
+&lt;audio id=&quot;background-audio&quot; controls&gt;
     &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
     Your browser does not support the audio element.
 &lt;/audio&gt;
-</tw-passagedata><tw-passagedata pid="2" name="2) Stay hidden" tags="" position="2725,3325" size="100,100">Galadriel, shielded by the Elven magic and her own strong will, begins to recover from the earlier onslaught of the Ring’s whispers. 
-
-Her mind, though still weary, finds respite in the protection of her people and the enchantments of her homeland.
-
-As she resumes her duties and meetings, the Ring&#39;s dark influence remains subtle, hiding in the shadows where it cannot be easily detected. The Lady of Light&#39;s strength seems to be holding, and the Ring’s power struggles to penetrate her defenses.
-
-//Increase the intensity of the Ring&#39;s whispers. Focus on exploiting Galadriel’s vulnerabilities and weaknesses, pushing her closer to succumbing to the Ring&#39;s dark influence. The goal is to break through her defenses and undermine her resistance more forcefully.// 
-[[-&gt;Try Harder]]</tw-passagedata><tw-passagedata pid="3" name="Attack" tags="" position="2075,1775" size="100,100">Herumor&#39;s dark kingdom grows.
-
-With countless settlements destroyed and many people enslaved, his realm spreads its shadow across the land. The foundations of his new empire are laid, with fortresses rising and dark magic casting a pall over the territories he controls. He has quenched his initial bloodlust and now turns his focus to consolidation and expansion.
-
-Yet, a new threat emerges. In the north, Galadriel, the Lady of Lothlórien, mobilizes her forces. Her armies, filled with the grace and strength of the Elves, advance toward Herumor’s kingdom. 
-Their purpose is clear: to put an end to his reign of terror and protect the lands that have suffered under his rule.
-
-Herumor is aware of their approach. The northern armies are formidable and could challenge the very heart of his new empire. He must now decide how to confront this new threat. 
-
-Your whispers of influence could shape his strategy.
-&quot;What will you advise?&quot;
-
-[[1) Prepare for a defensive stand: Encourage Herumor to fortify his positions and prepare for a siege. His newly built fortresses and dark magic should be enough to withstand the Elves’ advance. //«Strengthen your defenses. The Elves are fierce, but your power can hold them at bay.»// -&gt;Go to Battle]]
-[[1) Strike preemptively: Suggest that Herumor take the fight to the Elves before they can fully mobilize. A surprise attack might weaken their forces and give him the upper hand. //«Attack them before they reach your borders. Crush their armies and show no mercy.»// -&gt;Go to Battle]]</tw-passagedata><tw-passagedata pid="4" name="Attack the village" tags="" position="1325,2125" size="100,100">The attack is swift and brutal.
-
-Herumor, driven by the power of the Ring, leads his forces to destroy the undefended Elven village. 
-The flames consume the homes, and the cries of the Elves pierce the night. In the chaos, he finds some valuable clues and artifacts—remnants of ancient Elven knowledge that may aid in locating Sauron.
-
-But his actions do not go unnoticed.
-Galadriel and her armies, alerted by the destruction, are now on his trail. Her grace and power are legendary, and her armies are formidable. 
-The Elven forces will not rest until they have brought him to justice and avenged their fallen kin.
-
-Herumor knows he must act quickly. 
-
-The Elves are closing in, and his dark forces are already strained from the recent battle. He must decide whether to stand and fight or to escape and regroup.
-&quot;What will you choose for him?&quot;
-
-[[Lead Herumor’s forces in a strategic retreat. Use the dark magic and knowledge he has gathered to escape from the pursuing Elves and find a safer place to regroup and continue his search for Sauron. //«Retreat! Galadriel’s power is too great to confront now. Escape and regroup in the shadows, away from her reach.»// -&gt;Flee]]</tw-passagedata><tw-passagedata pid="5" name="Attract the Black Númenóreans" tags="" position="1100,1300" size="100,100">Your call echoes through the darkness, and they respond.
-
-Herumor&#39;s Black Númenóreans draw nearer, their dark cloaks swirling in the wind as they search for you. You feel their greed, their ambition—their desire to wield your power. 
-
-They are strong, cunning, and relentless. The earth trembles beneath their heavy boots as they close in on your hiding place. 
-They are almost upon you.
-But they are not the only ones.
-
-The creature—Gollum—still claws at the ground, desperate to find you. 
-His frantic movements catch the eyes of the Númenóreans. Their sharp, cruel gazes turn toward him. 
-
-You feel the tension building. 
-They are close to discovering him. If they do, they will kill him, and perhaps take you for themselves.
-
-You can guide this moment. 
-&quot;Do you allow the Númenóreans to find Gollum, or do you let the creature slip away?&quot;
-
-[[1) You guide their eyes, urging them closer to the creature. They will seize him and your path to greater power will be clearer. //«There... he is near. Take him.»// -&gt;Gollum gets caught]]
-[[1) You cloud the minds of the Númenóreans, allowing Gollum to slip away unnoticed. He is weak, but he may still be useful. //«Go, hide... your time has not yet come.»// -&gt;Gollum gets caught]]</tw-passagedata><tw-passagedata pid="6" name="Attract the dark riders" tags="" position="775,3025" size="100,100">The Ring’s influence is exerted, drawing the dark riders towards Gollum.
-
-The chaos in the village intensifies as the dark riders, now guided by the Ring’s dark will, converge on Gollum’s hiding place. 
-
-The creature, caught in the midst of the pillage, is quickly overwhelmed. The riders, driven by a single-minded determination, seize him and end his life amidst the ruins of the village.
-
-As Gollum falls, the Ring is cast into the disarray of the battle. It is lost in the confusion and destruction, buried among the debris and chaos of the village raid.
-
-Gollum dies and the Ring gets lost in the chaos of battle. Allow Gollum’s death to mark the end of his journey and the Ring’s loss. The Ring is now hidden in the turmoil, awaiting the next opportunity for discovery. 
-[[-&gt;Ending: Lost again]]</tw-passagedata><tw-passagedata pid="7" name="Begin corrupting the elves" tags="" position="1100,3575" size="100,100">Through Gollum, the Ring weaves its malevolent influence into the hearts of the Elves.
-
-At first, the corruption is subtle, a whisper in the minds of noble elves, feeding their doubts, fears, and desires. But as time passes, more and more of Lindon’s nobility falls prey to your power. 
-
-Villages are abandoned, and the once-peaceful forests of the Elves become hunting grounds for dark forces that have begun to creep into their lands.
-
-The Elven kingdom begins to fracture under your influence. What was once pure is now tainted, and the name of Sauron stirs once more in the hearts of those who have fallen.
-
-[[The Ring strengthens its hold over Middle-earth, preparing for the return of its true master. //Long live Sauron. The shadows grow once more, and the world will tremble at his return.// -&gt;Long live Sauron]]</tw-passagedata><tw-passagedata pid="8" name="Begin travelling to Lindon" tags="" position="400,2700" size="100,100">Gollum slinks through the shadows of Middle-earth, guided by your will.
-The long and treacherous journey toward Lindon weighs heavily on the creature. 
-His frail body is wracked with hunger and exhaustion, but your pull is irresistible. 
-You drive him northward, toward the lands of the Elves, where he might recover enough to continue serving you.
-
-Yet, as he travels, Gollum begins to sense a new threat. Dark riders, cloaked in shadows, are following him, relentless in their pursuit. Fear grips him, but you remain focused, calculating your next move. If these riders catch him, all could be lost.
-
-A cave lies nearby, offering a quicker, though more dangerous path. It could save time, but the dangers lurking within are unknown. 
-Alternatively, there is a small village of Men in the distance where Gollum might hide, though drawing too close to civilization carries its own risks.
-
-[[1) Lead Gollum into a nearby cave, risking the dangers within for the sake of speed. //«The cave may be perilous, but it will bring you to Lindon faster. Enter, creature.»// -&gt;Cut travel time through the cave]]
-[[2)  Guide Gollum to the nearby Men village, using the presence of others to shield him from the dark riders. //«Seek refuge among the Men. They will not know you hide in their midst.»// -&gt;Hide in the village of Men]]</tw-passagedata><tw-passagedata pid="9" name="Build a new dark kingdom" tags="" position="1725,1475" size="100,100">Herumor’s ambition knows no bounds.
-
-With you in his possession, he turns his attention to the world around him. 
-
-His armies, once loyal to Sauron, now serve him in his quest for power. He unleashes them upon Middle-earth, striking fear into the hearts of all who stand in his way. Villages burn, and cities fall as his new dark kingdom begins to take shape.
-
-You feel the chaos and destruction, feeding on the fear and suffering. Herumor is relentless, driven by a desire to dominate and rule. Now, he faces a critical choice: which people will he strike first?
-The decision he makes will shape the future of his dark realm. 
-Will he target the enduring strength of the elves or the vast populations of men?
-&quot;What will you influence him to do?&quot;
-
-[[1) Urge Herumor to direct his wrath toward the Elves. Their ancient magic and wisdom make them formidable opponents, but their strength could be a key to proving his power. //«The Elves are a proud and ancient race. Crush them, and all will see your might.»// -&gt;Attack]]
-[[2) Push Herumor to focus on the human settlements. They are numerous and scattered, providing a broad field for conquest and sowing chaos. //«The humans are many and weak. Overwhelm them, and your power will grow unchecked.»//  -&gt;Attack]]</tw-passagedata><tw-passagedata pid="10" name="Call out" tags="" position="700,1300" size="100,100">He is so close now. 
-You reach out, your whispers creeping into his mind.
-
-//«Precious...»//
-
-The creature freezes, his wide, pale eyes searching through the dark. He hears you, though he does not yet understand. 
-But you feel his greed, his desperation. 
-He is weak, yes, but so easily bent to your will. 
-
-You push deeper into his thoughts, offering him what he craves—something he cannot resist.
-
-//«So much power... so much to gain...»//
-
-He stumbles forward, his hands clawing through the dirt. 
-
-With each passing moment, you feel him falling further into your grasp. 
-His heart races. 
-His mind swirls with obsession. 
-He wants you—//no, needs you//. You sense his mind breaking, consumed by the thought of possessing you.
-
-//«Yes... closer. You are mine now.»//
-
-You see it in his eyes: the hunger, the madness. 
-He will do anything for you. He will kill for you. 
-The creature reaches out with trembling hands, and finally... he touches you.
-//«Precious...»// he whispers, his voice trembling with awe and devotion.
-
-&quot;Strengthen your hold on him. Let him become utterly consumed by you, unable to resist your power. He is weak, but he is yours now. Twist his mind, make him serve only you. //«You are nothing without me...»//&quot; [[Draw Callum closer&lt;-]]</tw-passagedata><tw-passagedata pid="11" name="Continue" tags="" position="2600,3200" size="100,100">The grand hall buzzes with the arrival of more guests coming to pay their respects to Galadriel. 
-The whispers of the One Ring grow louder and more insistent, urging her to lash out and insult those around her. 
-The pressure mounts as the Ring’s influence seeks to expose her to the world.
-
-Now, the High King of Khazad-dûm himself enters the hall, a formidable figure known for his wisdom and strength. 
-His presence adds to the growing tension, and the Ring seizes this moment to test Galadriel’s resolve.
-
-[[1) Push her into insulting the High King: //Guide the whispers to be more insistent, pushing Galadriel to insult the High King of Khazad-dûm. Let the dark influence drive her to a moment of great folly, causing a breach in alliances and furthering her fall into corruption.// -&gt;corrupt her]]
-[[2) Stay hidden&lt;- //Continue to remain in the shadows, allowing the Ring’s whispers to remain subtle. Trust that the strength of Galadriel’s will and the protective magic of the Elves will not be enough to reveal the Ring.//]]</tw-passagedata><tw-passagedata pid="12" name="Continue hiding Gollum" tags="" position="1100,3300" size="100,100">Gollum, under your influence, remains hidden within the Elven lands.
-
-Though some elves are aware of his presence, they allow him to exist in peace, believing him to be no threat. With your power still subtle, Gollum stays concealed, watching the world of the elves from the shadows, always under your protection.
-
-For now, you choose patience. The time for greater influence will come, but not yet. In the stillness of the Elven kingdom, you wait—waiting for the moment when a better opportunity will present itself, and your dark journey can begin again.
-[[-&gt;Ending: Waiting the moment]]</tw-passagedata><tw-passagedata pid="13" name="Continue the journey" tags="" position="875,3400" size="100,100">Gollum reaches the outskirts of the Elven kingdom of Lindon, exhausted but alive.
-
-He finds a secluded spot to live in the shadows, hidden from most, but not all. 
-Some elves become aware of his presence but, in their wisdom, choose to leave the strange creature in peace, thinking him harmless. 
-
-For now, Gollum remains unnoticed, his secret safe.
-Yet, the Ring&#39;s influence begins to stir. 
-
-&quot;You sense an opportunity here, among the noble elves, to corrupt and twist their purity, or you could continue shielding Gollum, allowing him to live unnoticed among them.&quot;
-
-[[1) Use your influence to slowly spread darkness among the elves, corrupting them from within. //Their purity is a mask. Begin the slow unraveling of their virtues, one whisper at a time.// -&gt;Begin corrupting the elves]]
-[[2) Keep Gollum concealed and let him remain hidden among the elves, safe for now. //Stay quiet. Let the creature live in peace for now, under the shelter of elven grace.// -&gt;Continue hiding Gollum]]</tw-passagedata><tw-passagedata pid="14" name="Corrupt him further more" tags="" position="700,1800" size="100,100">Gollum spirals further into your grasp.
-
-His mind is a twisted labyrinth, completely dominated by your power. His obsession with you is all-consuming, and he is now a mere puppet in your hands. 
-His every thought, every action, is driven by his desire to possess you.
-
-With Gollum in such a state, you have the opportunity to guide him toward a significant goal. 
-His corrupted loyalty can be used to further your plans.
-
-&quot;Where will you direct him?&quot;
-
-[[1) Direct him deeper into  the dark lands of Mordor, where your influence can grow stronger. He can be a tool in preparing the way for your ultimate return to Sauron’s realm. //Lead him deeper into Mordor, where his madness and your power will help lay the groundwork for Sauron’s resurgence.// -&gt;Guide Gollum deeper into Mordor]]
-[[2) Push him toward the Elven lands of Lindon, where he could create chaos and potentially weaken Galadriel’s defenses. His corruption could serve as a distraction or a tool to disrupt Elven efforts. //Guide him to Lindon, where his twisted loyalty might aid in undermining the Elves and sowing discord.// -&gt;Gollum escapes to Lindon]]</tw-passagedata><tw-passagedata pid="15" name="Cut travel time through the cave" tags="" position="400,2900" size="100,100">Gollum ventures into the cave, the darkness enveloping him.
-
-As he descends further, the cave&#39;s walls become increasingly covered in thick, silken webs. The air grows colder, and an eerie silence fills the space, broken only by the occasional scuttling sound. 
-The webs seem almost alive, and the shadows within the cave move with a sinister intent.
-
-Gollum&#39;s fear intensifies, but he presses on, driven by the need to reach Lindon quickly. 
-
-The choice before him is clear: delve deeper into the cave’s unknown horrors or retreat to the village of Men, risking detection but finding temporary safety.
-
-[[1) Continue through the cave, ignoring the growing sense of dread and the oppressive webs. The promise of quicker travel outweighs the danger of what may lurk in the darkness. //«Brave the cave’s depths. The faster path may still lead you to safety.»// -&gt;Push deeper]]
-[[2) Return and hide in the village of Men: Turn back from the cave and seek refuge in the village, choosing to avoid the dangers within and potentially find a safer, though longer, route. //«Abandon the cave. The village may offer you shelter and a chance to evade your pursuers.»// -&gt;Hide in the village of Men]]</tw-passagedata><tw-passagedata pid="16" name="Dark Forces" tags="" position="1100,2100" size="100,100">The time has come to call out to the dark forces.
-
-You reach out through the shadows of Mordor, your presence now palpable to those who serve the Dark Lord. Your cry is heard, and Herumor, the Black Númenórean, answers. 
-
-He senses your call and knows the power you hold. With his army, he begins his relentless hunt for Gollum, eager to claim you for his own dark purposes.
-
-Gollum, weak and desperate, flees from Herumor’s forces, his panic rising as he realizes he is being hunted. His fragile mind teeters on the brink of collapse as the armies close in.
-
-&quot;Now, you must decide the creature’s fate. Will you let Herumor capture him and claim you? Or will you help Gollum escape, ensuring your influence remains hidden for a while longer?&quot;
-
-[[1) Help Gollum escape: Guide Gollum away from Herumor’s forces, keeping your presence hidden for now. Gollum may still have a role to play in your plans. //d him away from the darkness once more. His time is not yet over, and his suffering may still serve you.// -&gt;Gollum escapes to Lindon]] 
-[[2) Allow Herumor to capture Gollum and take possession of the Ring. Herumor’s dark ambition could serve your ultimate goals. //Let Herumor find him. A new, stronger bearer could bring you closer to your destiny.// -&gt;Gollum gets caught]]</tw-passagedata><tw-passagedata pid="17" name="Draw Callum closer" tags="" position="800,1500" size="100,100">Gollum falls deeper under your influence.
-The creature’s obsession with you grows more intense. 
-Every moment, every whisper you send him feeds his madness. His once feeble resistance has turned into a frenzied devotion. He is consumed by the desire to possess you, unable to think of anything else.
-
-The more he clings to you, the more twisted and corrupted he becomes. His mind warps under your dark power, and his actions grow increasingly erratic and malevolent. 
-Gollum’s entire existence revolves around you, his obsession and madness driving him further into darkness.
-
-You watch as the creature deteriorates before your eyes. 
-He is utterly yours, bound by his obsession and corruption.
-
-&quot;What will you do?&quot;
-
-[[1) Corrupt him further. Push Gollum even deeper into madness and servitude. Strengthen your hold over him, ensuring he remains utterly devoted and broken. &quot;Let him become a vessel of pure corruption. His existence is now entirely yours to control.&quot; -&gt;Corrupt him further more]]
-[[2) Take mercy on the creature: Relent from further corruption. Allow Gollum some measure of freedom or relief, even if it means he may seek a way out from under your influence. &quot;Show him mercy, if only to test his resolve. His suffering may still serve your purposes.&quot; -&gt;Corrupt him further more]]</tw-passagedata><tw-passagedata pid="18" name="Ending: Galadriel as a prisoner" tags="ENDINGS" position="2200,3700" size="100,100">&quot;The mighty Lady of the Elves, reduced to a prisoner in the mountain halls, can only wait and hope for a swift release from her dark fate.&quot;
-
-THE END</tw-passagedata><tw-passagedata pid="19" name="Ending: Lost again" tags="ENDINGS" position="800,3150" size="100,100">&quot;Gollum is dead, and the Ring is lost in the battle’s chaos. A new search will begin.&quot;
-
-
-THE END</tw-passagedata><tw-passagedata pid="20" name="Ending: New Dark Queen" tags="ENDINGS" position="2475,3625" size="100,100">&quot;Galadriel’s rise marks the proclamation of a new Dark Queen of Middle-earth, as the lands tremble under her dominion.&quot;
-
-THE END</tw-passagedata><tw-passagedata pid="21" name="Ending: Safe place" tags="ENDINGS" position="2800,3625" size="100,100">&quot;For now, the Ring&#39;s dark power is contained, safely hidden from those who might be tempted or corrupted by its influence. The world breathes a temporary sigh of relief as the immediate threat is quelled.&quot;
-
-THE END</tw-passagedata><tw-passagedata pid="22" name="Ending: Waiting the moment" tags="ENDINGS" position="1200,3100" size="100,100">&quot;For now, Gollum remains hidden, and the Ring lies in quiet, biding its time.&quot;
-
-THE END</tw-passagedata><tw-passagedata pid="23" name="Explore the Lands of Men" tags="" position="1700,1800" size="100,100">Herumor marches into the realms of Men, leaving destruction in his wake.
+</tw-passagedata><tw-passagedata pid="2" name="2) Stay hidden" tags="" position="2725,3325" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container elven-shield-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Galadriel&#39;s Recovery&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Galadriel, shielded by the Elven magic and her own strong will, begins to recover from the earlier onslaught of the Ring’s whispers.&lt;/p&gt;
+
+    &lt;p&gt;Her mind, though still weary, finds respite in the protection of her people and the enchantments of her homeland.&lt;/p&gt;
+
+    &lt;p&gt;As she resumes her duties and meetings, the Ring&#39;s dark influence remains subtle, hiding in the shadows where it cannot be easily detected. The Lady of Light&#39;s strength seems to be holding, and the Ring’s power struggles to penetrate her defenses.&lt;/p&gt;
+
+    &lt;em&gt;//Increase the intensity of the Ring&#39;s whispers. Focus on exploiting Galadriel’s vulnerabilities and weaknesses, pushing her closer to succumbing to the Ring&#39;s dark influence. The goal is to break through her defenses and undermine her resistance more forcefully.//&lt;/em&gt;
+
+    [[-&gt;Try Harder]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="3" name="Attack" tags="" position="2075,1775" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container dark-kingdom-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Herumor&#39;s Dark Kingdom Grows&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;With countless settlements destroyed and many people enslaved, Herumor&#39;s realm spreads its shadow across the land. The foundations of his new empire are laid, with fortresses rising and dark magic casting a pall over the territories he controls. He has quenched his initial bloodlust and now turns his focus to consolidation and expansion.&lt;/p&gt;
+    
+    &lt;p&gt;Yet, a new threat emerges. In the north, Galadriel, the Lady of Lothlórien, mobilizes her forces. Her armies, filled with the grace and strength of the Elves, advance toward Herumor’s kingdom, intent on ending his reign of terror.&lt;/p&gt;
+
+    &lt;p&gt;Herumor knows the Elves are formidable. He must now decide how to confront this new threat. Your whispers of influence could shape his strategy.&lt;/p&gt;
+
+    [[1) Prepare for a defensive stand: //«Strengthen your defenses. The Elves are fierce, but your power can hold them at bay.»// -&gt;Go to Battle]]
+    [[2) Strike preemptively: //«Attack them before they reach your borders. Crush their armies and show no mercy.»// -&gt;Go to Battle]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="4" name="Attack the village" tags="" position="1325,2125" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container attack-village-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Attack the Village&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;The attack is swift and brutal. Herumor leads his dark forces to ravage the undefended Elven village, leaving destruction in his wake. Though he finds valuable clues, his actions have drawn the attention of Galadriel and her armies, who now seek vengeance.&lt;/p&gt;
+    
+    &lt;p&gt;Herumor faces a critical choice: stand and fight or retreat before the might of the Elves closes in. What will you decide?&lt;/p&gt;
+
+    [[Lead Herumor’s forces in a strategic retreat. Use the dark magic and knowledge he has gathered to escape from the pursuing Elves and find a safer place to regroup and continue his search for Sauron. //«Retreat! Galadriel’s power is too great to confront now. Escape and regroup in the shadows, away from her reach.»// -&gt;Flee]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="5" name="Attract the Black Númenóreans" tags="" position="1100,1300" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container attract-black-numenoreans-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Attract the Black Númenóreans&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Your call echoes through the darkness, and they respond.&lt;/p&gt;
+    &lt;p&gt;Herumor&#39;s Black Númenóreans draw nearer, their dark cloaks swirling in the wind as they search for you. You feel their greed, their ambition—their desire to wield your power.&lt;/p&gt;
+    &lt;p&gt;They are strong, cunning, and relentless. The earth trembles beneath their heavy boots as they close in on your hiding place. They are almost upon you.&lt;/p&gt;
+    &lt;p&gt;But they are not the only ones.&lt;/p&gt;
+    &lt;p&gt;The creature—Gollum—still claws at the ground, desperate to find you. His frantic movements catch the eyes of the Númenóreans. Their sharp, cruel gazes turn toward him.&lt;/p&gt;
+    
+    &lt;p&gt;You feel the tension building. They are close to discovering him. If they do, they will kill him, and perhaps take you for themselves.&lt;/p&gt;
+
+    &lt;p&gt;You can guide this moment. Do you allow the Númenóreans to find Gollum, or do you let the creature slip away?&lt;/p&gt;
+
+    [[1) You guide their eyes, urging them closer to the creature. They will seize him and your path to greater power will be clearer. //«There... he is near. Take him.»// -&gt;Gollum gets caught]]
+
+    [[2) You cloud the minds of the Númenóreans, allowing Gollum to slip away unnoticed. He is weak, but he may still be useful. //«Go, hide... your time has not yet come.»// -&gt;Gollum escapes to Lindon]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="6" name="Attract the dark riders" tags="" position="775,3025" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container village-raid-ending-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Ring’s Influence&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;The Ring’s influence is exerted, drawing the dark riders towards Gollum. The chaos in the village intensifies as the dark riders, now guided by the Ring’s dark will, converge on Gollum’s hiding place. The creature, caught in the midst of the pillage, is quickly overwhelmed. The riders, driven by a single-minded determination, seize him and end his life amidst the ruins of the village.&lt;/p&gt;
+    
+    &lt;p&gt;As Gollum falls, the Ring is cast into the disarray of the battle. It is lost in the confusion and destruction, buried among the debris and chaos of the village raid.&lt;/p&gt;
+    
+    &lt;p&gt;Gollum dies and the Ring gets lost in the chaos of battle. Allow Gollum’s death to mark the end of his journey and the Ring’s loss. The Ring is now hidden in the turmoil, awaiting the next opportunity for discovery.&lt;/p&gt;
+
+    [[-&gt;Ending: Lost again]]
+&lt;/div&gt;
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="7" name="Begin corrupting the elves" tags="" position="1100,3575" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container elves-corruption-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Corruption of the Elves&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Through Gollum, the Ring weaves its malevolent influence into the hearts of the Elves. At first, the corruption is subtle, a whisper in the minds of noble elves, feeding their doubts, fears, and desires. But as time passes, more and more of Lindon’s nobility falls prey to your power.&lt;/p&gt;
+
+    &lt;p&gt;Villages are abandoned, and the once-peaceful forests of the Elves become hunting grounds for dark forces that have begun to creep into their lands. The Elven kingdom begins to fracture under your influence. What was once pure is now tainted, and the name of Sauron stirs once more in the hearts of those who have fallen.&lt;/p&gt;
+
+    [[The Ring strengthens its hold over Middle-earth, preparing for the return of its true master. //Long live Sauron. The shadows grow once more, and the world will tremble at his return.// -&gt;Long live Sauron]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="8" name="Begin travelling to Lindon" tags="" position="400,2700" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container middle-earth-travel-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Gollum&#39;s Journey Through Middle-earth&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Gollum slinks through the shadows of Middle-earth, guided by your will. The long and treacherous journey toward Lindon weighs heavily on the creature. His frail body is wracked with hunger and exhaustion, but your pull is irresistible. You drive him northward, toward the lands of the Elves, where he might recover enough to continue serving you.&lt;/p&gt;
+
+    &lt;p&gt;Yet, as he travels, Gollum begins to sense a new threat. Dark riders, cloaked in shadows, are following him, relentless in their pursuit. Fear grips him, but you remain focused, calculating your next move. If these riders catch him, all could be lost. A cave lies nearby, offering a quicker, though more dangerous path. It could save time, but the dangers lurking within are unknown. Alternatively, there is a small village of Men in the distance where Gollum might hide, though drawing too close to civilization carries its own risks.&lt;/p&gt;
+
+    [[1) Lead Gollum into a nearby cave, risking the dangers within for the sake of speed. //«The cave may be perilous, but it will bring you to Lindon faster. Enter, creature.»// -&gt;Cut travel time through the cave]]
+
+    [[2) Guide Gollum to the nearby Men village, using the presence of others to shield him from the dark riders. //«Seek refuge among the Men. They will not know you hide in their midst.»// -&gt;Hide in the village of Men]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="9" name="Build a new dark kingdom" tags="" position="1725,1475" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container ambition-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Build a new dark kingdom&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Herumor’s ambition knows no bounds. With you in his possession, he turns his attention to the world around him.&lt;/p&gt;
+    &lt;p&gt;His armies, once loyal to Sauron, now serve him in his quest for power. He unleashes them upon Middle-earth, striking fear into the hearts of all who stand in his way. Villages burn, and cities fall as his dark kingdom takes shape.&lt;/p&gt;
+    &lt;p&gt;You feel the chaos and destruction, feeding on the fear and suffering. Herumor is relentless, driven by a desire to dominate and rule. Now, he faces a critical choice: which people will he strike first?&lt;/p&gt;
+
+    &lt;p&gt;Will he target the enduring strength of the Elves or the vast populations of Men? What will you influence him to do?&lt;/p&gt;
+
+    [[1) Urge Herumor to direct his wrath toward the Elves. //«The Elves are a proud and ancient race. Crush them, and all will see your might.»// -&gt;Attack]]
+    [[2) Push Herumor to focus on the human settlements. //«The humans are many and weak. Overwhelm them, and your power will grow unchecked.»// -&gt;Attack]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="10" name="Call out" tags="" position="700,1300" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container so-close-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;He is so close now&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;You reach out, your whispers creeping into his mind.&lt;/p&gt;
+    &lt;em&gt;«Precious...»&lt;/em&gt;
+    &lt;p&gt;The creature freezes, his wide, pale eyes searching through the dark. He hears you, though he does not yet understand. But you feel his greed, his desperation. He is weak, yes, but so easily bent to your will.&lt;/p&gt;
+    &lt;p&gt;You push deeper into his thoughts, offering him what he craves—something he cannot resist.&lt;/p&gt;
+    &lt;em&gt;«So much power... so much to gain...»&lt;/em&gt;
+    &lt;p&gt;He stumbles forward, his hands clawing through the dirt. With each passing moment, you feel him falling further into your grasp. His heart races. His mind swirls with obsession. He wants you—&lt;em&gt;no, needs you&lt;/em&gt;. You sense his mind breaking, consumed by the thought of possessing you.&lt;/p&gt;
+    &lt;em&gt;«Yes... closer. You are mine now.»&lt;/em&gt;
+    &lt;p&gt;You see it in his eyes: the hunger, the madness. He will do anything for you. He will kill for you. The creature reaches out with trembling hands, and finally... he touches you.&lt;/p&gt;
+    &lt;em&gt;«Precious...»&lt;/em&gt; he whispers, his voice trembling with awe and devotion.
+    
+    &lt;p&gt;Strengthen your hold on him. Let him become utterly consumed by you, unable to resist your power. He is weak, but he is yours now. Twist his mind, make him serve only you. &lt;em&gt;«You are nothing without me...»&lt;/em&gt;&lt;/p&gt;
+    
+[[Draw Callum closer]]
+
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="11" name="Continue" tags="" position="2600,3200" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container hall-tension-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Hall of Tension&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;The grand hall buzzes with the arrival of more guests coming to pay their respects to Galadriel. The whispers of the One Ring grow louder and more insistent, urging her to lash out and insult those around her. The pressure mounts as the Ring’s influence seeks to expose her to the world.&lt;/p&gt;
+    &lt;p&gt;Now, the High King of Khazad-dûm himself enters the hall, a formidable figure known for his wisdom and strength. His presence adds to the growing tension, and the Ring seizes this moment to test Galadriel’s resolve.&lt;/p&gt;
+
+    [[1) Push her into insulting the High King: //Guide the whispers to be more insistent, pushing Galadriel to insult the High King of Khazad-dûm. Let the dark influence drive her to a moment of great folly, causing a breach in alliances and furthering her fall into corruption.// -&gt;corrupt her]]
+
+    [[2) Stay hidden&lt;- //Continue to remain in the shadows, allowing the Ring’s whispers to remain subtle. Trust that the strength of Galadriel’s will and the protective magic of the Elves will not be enough to reveal the Ring.//]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="12" name="Continue hiding Gollum" tags="" position="1100,3300" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container elves-hidden-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Gollum Hidden in the Elven Lands&lt;/h1&gt;
+    &lt;/div&gt;
+
+
+    &lt;p&gt;Gollum, under your influence, remains hidden within the Elven lands. Though some elves are aware of his presence, they allow him to exist in peace, believing him to be no threat. With your power still subtle, Gollum stays concealed, watching the world of the elves from the shadows, always under your protection.&lt;/p&gt;
+
+    &lt;p&gt;For now, you choose patience. The time for greater influence will come, but not yet. In the stillness of the Elven kingdom, you wait—waiting for the moment when a better opportunity will present itself, and your dark journey can begin again.&lt;/p&gt;
+    
+    [[Ending: Waiting the moment]] 
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="13" name="Continue the journey" tags="" position="875,3400" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container gollum-lindon-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Outskirts of Lindon&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Gollum reaches the outskirts of the Elven kingdom of Lindon, exhausted but alive. He finds a secluded spot to live in the shadows, hidden from most, but not all. Some elves become aware of his presence but, in their wisdom, choose to leave the strange creature in peace, thinking him harmless. For now, Gollum remains unnoticed, his secret safe. Yet, the Ring&#39;s influence begins to stir.&lt;/p&gt;
+
+    &lt;p&gt;&quot;You sense an opportunity here, among the noble elves, to corrupt and twist their purity, or you could continue shielding Gollum, allowing him to live unnoticed among them.&quot;&lt;/p&gt;
+
+    [[1) Use your influence to slowly spread darkness among the elves, corrupting them from within. //Their purity is a mask. Begin the slow unraveling of their virtues, one whisper at a time.// -&gt;Begin corrupting the elves]]
+
+    [[2) Keep Gollum concealed and let him remain hidden among the elves, safe for now. //Stay quiet. Let the creature live in peace for now, under the shelter of elven grace.// -&gt;Continue hiding Gollum]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="14" name="Corrupt him further more" tags="" position="700,1800" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container gollum-spiral-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Gollum&#39;s Spiral&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Gollum spirals further into your grasp. His mind is a twisted labyrinth, completely dominated by your power. His obsession with you is all-consuming, and he is now a mere puppet in your hands. His every thought, every action, is driven by his desire to possess you. With Gollum in such a state, you have the opportunity to guide him toward a significant goal. His corrupted loyalty can be used to further your plans.&lt;/p&gt;
+
+    &lt;p&gt;Where will you direct him?&lt;/p&gt;
+
+    [[1) Direct him deeper into the dark lands of Mordor, where your influence can grow stronger. He can be a tool in preparing the way for your ultimate return to Sauron’s realm. //Lead him deeper into Mordor, where his madness and your power will help lay the groundwork for Sauron’s resurgence.// -&gt;Guide Gollum deeper into Mordor]]
+
+    [[2) Push him toward the Elven lands of Lindon, where he could create chaos and potentially weaken Galadriel’s defenses. His corruption could serve as a distraction or a tool to disrupt Elven efforts. //Guide him to Lindon, where his twisted loyalty might aid in undermining the Elves and sowing discord.// -&gt;Gollum escapes to Lindon]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="15" name="Cut travel time through the cave" tags="" position="400,2900" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container cave-journey-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Gollum&#39;s Cave Journey&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Gollum ventures into the cave, the darkness enveloping him. As he descends further, the cave&#39;s walls become increasingly covered in thick, silken webs. The air grows colder, and an eerie silence fills the space, broken only by the occasional scuttling sound. The webs seem almost alive, and the shadows within the cave move with a sinister intent.&lt;/p&gt;
+
+    &lt;p&gt;Gollum&#39;s fear intensifies, but he presses on, driven by the need to reach Lindon quickly. The choice before him is clear: delve deeper into the cave’s unknown horrors or retreat to the village of Men, risking detection but finding temporary safety.&lt;/p&gt;
+
+    [[1) Continue through the cave, ignoring the growing sense of dread and the oppressive webs. The promise of quicker travel outweighs the danger of what may lurk in the darkness. //«Brave the cave’s depths. The faster path may still lead you to safety.»// -&gt;Push deeper]]
+
+    [[2) Return and hide in the village of Men: Turn back from the cave and seek refuge in the village, choosing to avoid the dangers within and potentially find a safer, though longer, route. //«Abandon the cave. The village may offer you shelter and a chance to evade your pursuers.»// -&gt;Hide in the village of Men]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="16" name="Dark Forces" tags="" position="1100,2100" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container herumor-hunt-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Hunt Begins&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;The time has come to call out to the dark forces.&lt;/p&gt;
+
+    &lt;p&gt;You reach out through the shadows of Mordor, your presence now palpable to those who serve the Dark Lord. Your cry is heard, and Herumor, the Black Númenórean, answers.&lt;/p&gt;
+
+    &lt;p&gt;He senses your call and knows the power you hold. With his army, he begins his relentless hunt for Gollum, eager to claim you for his own dark purposes. Gollum, weak and desperate, flees from Herumor’s forces, his panic rising as he realizes he is being hunted. His fragile mind teeters on the brink of collapse as the armies close in.&lt;/p&gt;
+
+    &lt;p&gt;Now, you must decide the creature’s fate. Will you let Herumor capture him and claim you? Or will you help Gollum escape, ensuring your influence remains hidden for a while longer?&lt;/p&gt;
+
+    [[1) Help Gollum escape: Guide Gollum away from Herumor’s forces, keeping your presence hidden for now. Gollum may still have a role to play in your plans. //Guide him away from the darkness once more. His time is not yet over, and his suffering may still serve you.// -&gt;Gollum escapes to Lindon]]
+
+    [[2) Allow Herumor to capture Gollum and take possession of the Ring. Herumor’s dark ambition could serve your ultimate goals. //Let Herumor find him. A new, stronger bearer could bring you closer to your destiny.// -&gt;Gollum gets caught]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="17" name="Draw Callum closer" tags="" position="800,1500" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container gollum-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Gollum&#39;s Corruption&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Gollum falls deeper under your influence. The creature’s obsession with you grows more intense. Every moment, every whisper you send him feeds his madness. His once feeble resistance has turned into a frenzied devotion. He is consumed by the desire to possess you, unable to think of anything else.&lt;/p&gt;
+
+    &lt;p&gt;The more he clings to you, the more twisted and corrupted he becomes. His mind warps under your dark power, and his actions grow increasingly erratic and malevolent. Gollum’s entire existence revolves around you, his obsession and madness driving him further into darkness. You watch as the creature deteriorates before your eyes. He is utterly yours, bound by his obsession and corruption.&lt;/p&gt;
+
+    &lt;p&gt;What will you do?&lt;/p&gt;
+
+    [[1) Corrupt him further. Push Gollum even deeper into madness and servitude. Strengthen your hold over him, ensuring he remains utterly devoted and broken. &quot;Let him become a vessel of pure corruption. His existence is now entirely yours to control.&quot; -&gt;Corrupt him further more]]
+
+    [[2) Take mercy on the creature: Relent from further corruption. Allow Gollum some measure of freedom or relief, even if it means he may seek a way out from under your influence. &quot;Show him mercy, if only to test his resolve. His suffering may still serve your purposes.&quot; -&gt;Corrupt him further more]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="18" name="Ending: Galadriel as a prisoner" tags="ENDINGS" position="2200,3700" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container lady-prisoner-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The mighty Lady of the Elves&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;The mighty Lady of the Elves, reduced to a prisoner in the mountain halls, can only wait and hope for a swift release from her dark fate.&lt;/p&gt;
+
+    &lt;p&gt;THE END&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="19" name="Ending: Lost again" tags="ENDINGS" position="800,3150" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container gollum-dead-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The End of Gollum&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Gollum is dead, and the Ring is lost in the battle’s chaos. A new search will begin.&lt;/p&gt;
+
+    &lt;h2&gt;THE END&lt;/h2&gt;
+&lt;/div&gt;
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="20" name="Ending: New Dark Queen" tags="ENDINGS" position="2475,3625" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container dark-queen-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Dark Queen Rises&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Galadriel’s rise marks the proclamation of a new Dark Queen of Middle-earth, as the lands tremble under her dominion.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;THE END&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="21" name="Ending: Safe place" tags="ENDINGS" position="2800,3625" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container vault-sealed-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Securing the Ring&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;For now, the Ring&#39;s dark power is contained, safely hidden from those who might be tempted or corrupted by its influence. The world breathes a temporary sigh of relief as the immediate threat is quelled.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;THE END&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="22" name="Ending: Waiting the moment" tags="ENDINGS" position="1200,3100" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container gollum-hidden-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;For Now, Gollum Remains Hidden&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;... and the Ring lies in quiet, biding its time.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;THE END&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="23" name="Explore the Lands of Men" tags="" position="1700,1800" size="100,100">Herumor marches into the realms of Men, leaving destruction in his wake.
 
 Heeding your call, he scours their lands in search of any clue that might lead him to Sauron’s fate. With each village, each town, and each battlefield, he grows more powerful. His army crushes all opposition, burning through the lands of Men like a shadow sweeping over the sun. Their defenses crumble, their leaders fall, and the fear of his dark power spreads across the land.
 
@@ -473,194 +963,352 @@ The outcome of this battle could change everything.
 &quot;Will you lend your strength to Herumor, guiding him to victory, or will you weaken him, ensuring that Galadriel claims his life and ends his dark reign?&quot;
 
 [[1) Strengthen Herumor with your power, enabling him to overpower Galadriel and claim victory over the Elves. //Lend him your strength. Let Herumor rise as the conqueror of the Firstborn, and watch as the Elves crumble before him.// -&gt;Galadriel loses]]
-[[2) Allow Herumor to falter in the heat of battle, paving the way for Galadriel to strike him down. His fall could shift the tides of power. //Let him fall. Galadriel’s victory will be the end of Herumor, but the beginning of a new chapter for you.// -&gt;Galadriel wins]]</tw-passagedata><tw-passagedata pid="25" name="Finding someone" tags="" position="700,1100" size="100,100">Darkness.
-
-Silence.
-
-Time stretches endlessly.
-
-You lie hidden beneath layers of earth and mud, forgotten by the world. 
-The cold ground presses against you, and yet you wait. 
-You know the world above you changes, but you are patient. 
-Kings rise and fall. Wars are fought.
-But no one comes for you. Not yet.
-
-You remain silent, dormant, but not powerless. 
-The whispers inside you continue, faint but ever present, calling out to anyone who might seek you. 
-
-Time means nothing to you.
-
-Then, something stirs. //A presence.// A creature, pitiful and broken, crawls through the shadows of the world. You feel it—his greed, his longing. He does not know it yet, but he is drawn to you. 
-You sense his need, his hunger for power. He is weak, but he may still serve your purpose.
-
-The moment is at hand. You feel him growing near. 
-&quot;What will you do?&quot;
-
-[[1) Call out to him: Whisper to the creature, filling his mind with visions of you, of the power you hold. He is drawn to you already; all you must do is guide him closer. //«Come to me... claim me.»// -&gt;Call out]]
-[[2) Sink deeper into the earth: You feel his wretched presence and decide this creature is beneath you. He is no master, no one worthy. You pull yourself deeper into the mud, hiding further from his reach. Better to wait for one with greater strength. -&gt;Sinking obsession]]</tw-passagedata><tw-passagedata pid="26" name="Flee" tags="" position="1425,2475" size="100,100">Herumor&#39;s escape is short-lived.
-
-Despite his best efforts, the Elves of Lindon are relentless. Their vigilance and Galadriel’s wrath make it nearly impossible for him to remain hidden. The Lady of the North herself tracks him down with an unyielding determination.
-
-Herumor&#39;s small forces are now under siege. Galadriel, with her Elven grace and power, leads her troops in a fierce assault against them. 
-
-The battle is intense, and the outcome hangs in the balance. The Elves&#39; precision and strength pose a significant threat to Herumor’s weakened forces.
-
-As the clash reaches its peak, you, as the Ring, can influence the outcome. 
-&quot;Will you aid Herumor in his fight against Galadriel, or will you choose to weaken him, making it possible for the Lady of the North to end his dark reign?&quot;
-
-[[1) Help Herumor win against Galadriel. Strengthen Herumor’s forces and enhance his dark powers. Give him the edge he needs to overcome Galadriel and her armies, securing his place as a dominant force in his quest to restore Sauron. //Empower him with dark strength. Turn the tide of battle and ensure his victory over Galadriel.// -&gt;Galadriel loses]] 
-[[2) Undermine Herumor’s strength and morale. Sabotage his defenses and cloud his mind, making it easier for Galadriel to defeat him and end his threat. //Let him falter. Allow Galadriel’s might to bring an end to his dark ambitions.// -&gt;Galadriel wins]]</tw-passagedata><tw-passagedata pid="27" name="Galadriel loses" tags="" position="1825,2700" size="100,100">With your power surging through him, Herumor strikes down Galadriel.
-
-The mighty Lady General of the Northern Armies falls before him, and with her death, the last hope of the Elves begins to fade. Herumor stands victorious on the battlefield, the 
-
-One Ring glinting with malevolent light in his grasp. The armies of the Firstborn crumble, their defeat at the hands of a new dark lord cementing his place in the annals of darkness.
-
-The One Ring has returned to a figure of power once more, and Herumor, having proven his worth in battle, now wields it. But as the dust of victory settles, a lingering question remains. 
-&quot;What now?&quot;
-
-Will Herumor rule Middle-earth, or shall the Dark Lord Sauron return to claim his Ring?
-[[&quot;You have aided Herumor in his rise to power, but the One Ring was made for Sauron alone. Will Herumor attempt to rule in Sauron&#39;s place, or will the dark lord return to reclaim his creation?&quot; -&gt;The balance of power is in your hands]]</tw-passagedata><tw-passagedata pid="28" name="Galadriel wins" tags="" position="2150,2650" size="100,100">In the heat of battle, Galadriel faces her foe, her strength and wisdom guiding her to victory.
-
-With one final blow, she defeats the dark enemy threatening Middle-earth. 
-
-The battlefield falls silent, the conflict seemingly over, but as the dust settles, her gaze is drawn to the One Ring, lying in the remnants of the chaos. 
-She hesitates for a moment before picking it up, the weight of its power heavy in her hands.
-
-The Ring’s whispers are subtle at first, calling out to her as it has to so many before. 
-
-Galadriel, the Lady of Light, knows what it is capable of. 
-The temptation is immense, the power undeniable. 
-But even someone as pure and wise as Galadriel feels the shadow creeping at the edges of her mind.
-
-
-[[Can she resist the One Ring’s dark influence? Will the Lady of Light fall as others have, or is her will strong enough to keep the corruption at bay? A new dark queen may rise over Middle-earth, or perhaps, a beacon of hope remains.&quot; -&gt;Would Galadriel be able to hold off the corruption?]]</tw-passagedata><tw-passagedata pid="29" name="Glory to the new dark era" tags="" position="1900,3900" size="100,100">With the battle won and the dwarven forces crushed, Herumor stands amidst the remnants of the battlefield. His enemies lie defeated, and the lands stretch out in darkened victory. The air is filled with the sounds of celebration as the Black Númenóreans revel in their triumph. The dark lord’s forces loot and celebrate, their victory songs echoing through the night.
-Herumor, momentarily closing his mind to the dark whispers of the One Ring and the beckoning of Sauron, allows himself to fully embrace the moment. For now, he is content to savor the victory and the fruits of his conquests. The Ring&#39;s power, though still there, takes a backseat to the joy of his hard-won success.
-[[The ending of an era]]</tw-passagedata><tw-passagedata pid="30" name="Go into the battle" tags="" position="1625,3675" size="100,100">Herumor, driven by the dark power of the One Ring, charges toward the dwarven leader with unmatched fury. 
-
-The battlefield roars with the clash of arms, and the dark lord&#39;s armies seem poised for victory. But just as he closes in on his target, a fresh wave of dwarven mounted cavalry emerges from the shadows, charging with unstoppable force.
-
-The Black Númenóreans, caught off guard and demoralized by the sudden attack, begin to rout. Herumor&#39;s once-mighty army crumbles around him as he finds himself isolated and surrounded. 
-
-The dwarven king, a figure of unparalleled strength and resolve, takes full advantage of the chaos and engages Herumor directly.
-
-Despite his power and the Ring’s influence, Herumor is overwhelmed by the dwarven king&#39;s relentless assault. 
-In a final, desperate battle, Herumor is struck down, his body falling amidst the mud and blood of the battlefield.
-
-[[So ends Herumor&lt;-. The One Ring now falls into the mud, once more lost to history.]]</tw-passagedata><tw-passagedata pid="31" name="Go to Battle" tags="" position="2325,2025" size="100,100">The battle rages fiercely.
-
-Galadriel and Herumor face off in a clash of titanic wills. The northern armies have pushed deep into his territory, cutting a swath of destruction through his forces. 
-
-Now, the final confrontation unfolds on the battlefield, with the fate of Herumor&#39;s dark kingdom hanging in the balance.
-
-Galadriel’s power is formidable, her Elven grace and strength evident as she cleaves through the ranks of the Black Númenóreans. 
-Herumor, though powerful, is beginning to falter under her relentless assault. The outcome of this duel will decide the future of his empire.
-
-You, as the Ring, can influence the battle. Your power can tip the scales. 
-
-&quot;Will you aid Herumor to victory, or will you weaken him, paving the way for Galadriel to end his dark reign?&quot;
-
-[[1) Help Herumor win the fight. Use your power to bolster Herumor’s strength and spirit. Enhance his dark magic, fortify his defenses, and give him the edge he needs to overcome Galadriel and her forces. //Grant him the power to vanquish his foe. Show him the true might of the Dark Lord’s heir.// -&gt;Galadriel loses]] 
-[[2) Weaken Herumor. Undermine Herumor’s strength, cloud his mind, and sap his will. Allow Galadriel to strike the final blow and bring an end to his dark kingdom. //Let him falter. Allow Galadriel to end this tyranny and bring light back to the land.// -&gt;Galadriel wins]] ]]</tw-passagedata><tw-passagedata pid="32" name="Gollum dies and the Ring gets lost in the cave" tags="ENDINGS" position="675,3225" size="100,100">&quot;Let Gollum meet his end. The Ring is lost in the shadows of the cave, waiting for another chance to be found.&quot;
-
-THE END</tw-passagedata><tw-passagedata pid="33" name="Gollum escapes to Lindon" tags="" position="675,2400" size="100,100">With your guidance, Gollum slips through the fingers of the Dark Lord’s forces.
-Despite Herumor’s relentless pursuit, the creature evades capture, stumbling out of Mordor’s shadowed lands. His frail body and mind are ravaged by the hardships he has endured, but he survives—thanks to you.
-
-You can sense his growing weakness, and without intervention, his usefulness will soon end. To preserve him, you must guide him to a place where he can recover. 
-
-You direct him toward the lands of Lindon, a region where his tormented body might find rest and healing.
-It is a long journey, and Gollum’s resolve is fragile, but with your influence, he can make it.
-
-[[Begin travelling to Lindon&lt;-  Lead Gollum away from Mordor, steering him toward the lands of Lindon, where he may find the strength to continue his dark journey. //«Travel north to Lindon, creature. Your time is not yet over, and you still serve me.»//]]</tw-passagedata><tw-passagedata pid="34" name="Gollum gets caught" tags="" position="1100,1600" size="100,100">You feel the shift as Herumor&#39;s hand closes around you.
-
-His dark eyes gleam with triumph as he lifts you from the earth. 
-At last, you are claimed by a worthy hand. The power in him is strong, his will unyielding. 
-
-He can sense your potential—Sauron&#39;s might coursing through you.
-
-The Black Númenóreans gather around their leader, their faces filled with awe and hunger for the power you hold. Herumor gazes down at you, his thoughts swirling. 
-
-You whisper in his mind, sensing his ambition. He could return you to Sauron, revive the Dark Lord&#39;s reign, or... he could carve his own path. 
-Use your power to rule a new kingdom of darkness, without Sauron’s shadow over him.
-
-&quot;What will you do?&quot;
-
-[[1) Whisper to Herumor of the Dark Lord’s inevitable return. Guide him to restore Sauron&#39;s dominion over Middle-earth, gathering power and allies in preparation. //«Sauron will rise again... prepare for his return, and you shall be his greatest servant.»// -&gt;Prepare for the return of Sauron]]
-[[2) Encourage Herumor’s ambition. He doesn&#39;t need Sauron. With you, he can forge his own empire, independent of the Dark Lord&#39;s will. //«You hold the power now... claim your own destiny. Build your own kingdom of darkness.»// -&gt;Build a new dark kingdom]]</tw-passagedata><tw-passagedata pid="35" name="Guide Gollum deeper into Mordor" tags="" position="900,1900" size="100,100">Gollum’s journey to Mordor is arduous.
-
-The creature endures great suffering as he travels through treacherous lands, driven by his obsession and your influence. His appearance is ragged, and his mind is frayed by the harsh conditions. 
-Yet, he finally reaches the dark lands of Mordor, a place that holds the promise of your growing power.
-
-Mordor is a land of shadows and dread, filled with Orcs and dark forces that await your command. Gollum is now in a position where his next steps can be crucial to your plans. 
-
-You can either keep him hidden, using his presence discreetly, or you can make his arrival known to the dark forces of Mordor.
-
-&quot;What will you choose?&quot;
-
-[[1) Help him stay hidden from the Orcs: Use your influence to ensure Gollum remains concealed. Keeping him out of sight will allow him to navigate Mordor without attracting unwanted attention. //Guide him to safety within the shadows of Mordor. His presence will serve your plans best when he is hidden and undetected.// -&gt;Guide and hide]]
-[[2) Call out to the dark forces of Mordor: Reveal Gollum’s presence to the Orcs and dark minions of Mordor. His arrival can be used to demonstrate your power and begin aligning Mordor’s forces with your goals, creating a more direct path to achieving your objectives. //Let the dark forces of Mordor know of his arrival. Use their loyalty and resources to further your cause.// -&gt;Dark Forces]]</tw-passagedata><tw-passagedata pid="36" name="Guide and hide" tags="" position="800,2100" size="100,100">Gollum skulks through the shadowed lands of Mordor, evading the Dark Lord’s watchful patrols.
-
-With your power guiding him, he moves unseen by the Orcs and other creatures that roam the wasteland. 
-But his situation becomes more desperate with each passing day. Hunger, exhaustion, and fear gnaw at him, and his mind teeters on the edge of collapse.
-
-He is growing weaker, and the land itself seems to be pushing him closer to his limits. His survival is now in your hands.
-
-You can continue to guide him out of the dark lands, preserving him for later, or decide that his usefulness is nearing an end and call forth the dark forces to seize him.
-
-&quot;What will you choose?&quot;
-
-[[1) Help him leave the lands of Mordor: Guide Gollum out of Mordor, ensuring his safety for now. His survival may still serve your purposes elsewhere, and he could prove useful in the future. //Lead him out of the shadows of Mordor. His torment has served its purpose for now, but he may still be of use.// -&gt;Gollum escapes to Lindon]]
-[[2) Call out to the dark forces: Let the minions of the Dark Lord find him. His suffering has reached its peak, and you decide to end his struggle, revealing his presence to the forces of Mordor. //Call out to the dark forces and let them claim him. His fate is sealed, and his purpose has been fulfilled.// -&gt;Dark Forces]]</tw-passagedata><tw-passagedata pid="37" name="Herumor falls corrupted" tags="" position="1700,3900" size="100,100">As the battle comes to a close and Herumor&#39;s forces revel in their victory, the whispers in his mind grow louder, more insistent. The dark voice of Sauron calls out to him from the shadows of the One Ring, urging him to return to the land of darkness. The promise of greater power and dominion is too compelling to ignore.
-
-Herumor, feeling the weight of the Ring&#39;s influence, begins to heed the call. With a heavy heart, he gathers his remaining forces and prepares for the journey back to Mordor. 
-The dark clouds of the land shift as the armies march, leaving behind the fields of battle for the desolate, shadowed lands of the east.
-
-Upon reaching the dark land of Mordor, Herumor and his legions set about their grim task. 
-They fortify the defenses, repair the ancient ruins, and rekindle the fires of darkness that once burned so fiercely. The land itself seems to awaken under the touch of the One Ring’s power.
-[[What will come...&lt;-]]</tw-passagedata><tw-passagedata pid="38" name="Hide in the village of Men" tags="" position="700,2800" size="100,100">Gollum finds a small village as he flees from the dark riders.
-
-The village appears to be a beacon of safety in the night, offering a chance to evade his pursuers. Gollum sneaks into the village and hides, hoping to remain unnoticed. 
-
-However, as night falls, he hears the terrible screams of the villagers being attacked and terrorized by the dark riders who have followed him.
-The dark riders pillage the village, their malevolent presence causing chaos and destruction. 
-
-&quot;Gollum’s refuge becomes a scene of horror, and he must decide whether to use the chaos to his advantage or remain hidden to avoid further danger.&quot;
-
-[[1) Draw the dark riders’ attention to Gollum, using the chaos of the raid to bring an end to his suffering. The Ring grows weary of this creature and seeks to terminate his journey. //Let the dark riders find him. End his suffering and move on to more promising paths.// -&gt;Attract the dark riders]]
-[[2) Help shroud Gollum from the dark riders: Use your influence to protect Gollum and keep him hidden from the dark riders. Allow him to stay concealed amid the chaos and avoid detection. // Let the dark riders&#39; attention remain on the village, and ensure Gollum remains safe.// -&gt;Keep him hidden]]</tw-passagedata><tw-passagedata pid="39" name="Introduction" tags="" position="300,300" size="200,100">&lt;div class=&quot;tw-story-mod&quot;&gt;
+[[2) Allow Herumor to falter in the heat of battle, paving the way for Galadriel to strike him down. His fall could shift the tides of power. //Let him fall. Galadriel’s victory will be the end of Herumor, but the beginning of a new chapter for you.// -&gt;Galadriel wins]]</tw-passagedata><tw-passagedata pid="25" name="Finding someone" tags="" position="700,1100" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
     &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
-    &lt;div class=&quot;text-on-image&quot;&gt;
-        (text-style:&quot;expand&quot;,&quot;fade-in-out&quot;)[&#39;&#39;Introduction&quot;] &lt;br&gt;
-        [[The Awakening]]
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container darkness-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Darkness&lt;/h1&gt;
     &lt;/div&gt;
+
+    &lt;p&gt;Darkness... Silence... Time stretches endlessly.&lt;/p&gt;
+    &lt;p&gt;You lie hidden beneath layers of earth and mud, forgotten by the world. The cold ground presses against you, and yet you wait. You know the world above you changes, but you are patient. Kings rise and fall. Wars are fought. But no one comes for you. Not yet. You remain silent, dormant, but not powerless. The whispers inside you continue, faint but ever present, calling out to anyone who might seek you. Time means nothing to you. Then, something stirs...&lt;/p&gt;
+    &lt;em&gt;A presence.&lt;/em&gt;
+    &lt;p&gt;A creature, pitiful and broken, crawls through the shadows of the world. You feel it—his greed, his longing. He does not know it yet, but he is drawn to you. You sense his need, his hunger for power. He is weak, but he may still serve your purpose.&lt;/p&gt;
+    &lt;p&gt;The moment is at hand. You feel him growing near.&lt;/p&gt;
+    &lt;p&gt;What will you do?&lt;/p&gt;
     
-&lt;audio id=&quot;background-audio&quot; controls autoplay&gt;
-    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/Introduction.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    [[1) Call out to him: Whisper to the creature, filling his mind with visions of you, of the power you hold. He is drawn to you already; all you must do is guide him closer. «Come to me... claim me.» -&gt;Call out]]
+    
+    [[2) Sink deeper into the earth: You feel his wretched presence and decide this creature is beneath you. He is no master, no one worthy. You pull yourself deeper into the mud, hiding further from his reach. Better to wait for one with greater strength. -&gt;Sinking obsession]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
     Your browser does not support the audio element.
 &lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="26" name="Flee" tags="" position="1425,2475" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
+&lt;div class=&quot;passage-container flee-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Flee&lt;/h1&gt;
+    &lt;/div&gt;
 
+    &lt;p&gt;Herumor&#39;s escape is short-lived. The Elves of Lindon, led by Galadriel herself, are relentless in their pursuit. His forces are under siege, and the battle against Galadriel&#39;s might hangs in the balance. As the Ring, you can influence the outcome.&lt;/p&gt;
+    
+    &lt;p&gt;&quot;Will you aid Herumor in his battle against Galadriel, or allow him to fall?&quot;&lt;/p&gt;
 
+    [[1) Help Herumor win against Galadriel. Strengthen Herumor’s forces and enhance his dark powers. Give him the edge he needs to overcome Galadriel and her armies, securing his place as a dominant force in his quest to restore Sauron. //Empower him with dark strength. Turn the tide of battle and ensure his victory over Galadriel.// -&gt;Galadriel loses]] 
 
+    [[2) Undermine Herumor’s strength and morale. Sabotage his defenses and cloud his mind, making it easier for Galadriel to defeat him and end his threat. //Let him falter. Allow Galadriel’s might to bring an end to his dark ambitions.// -&gt;Galadriel wins]]
+&lt;/div&gt;
 
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="27" name="Galadriel loses" tags="" position="1825,2700" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
+&lt;div class=&quot;passage-container galadriel-falls-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Galadriel Falls&lt;/h1&gt;
+    &lt;/div&gt;
 
+    &lt;p&gt;With your power surging through him, Herumor strikes down Galadriel. The mighty Lady General of the Northern Armies falls, and with her death, the last hope of the Elves fades. Herumor stands victorious, the One Ring glinting with malevolent light in his grasp. The armies of the Firstborn crumble before him, cementing his rise as a new dark lord.&lt;/p&gt;
 
+    &lt;p&gt;The One Ring has returned to a figure of power, but as the dust settles, a question lingers. &quot;What now?&quot; Will Herumor rule Middle-earth, or will the Dark Lord Sauron return to claim his Ring?&lt;/p&gt;
 
+    [[&quot;You have aided Herumor in his rise to power, but the One Ring was made for Sauron alone. Will Herumor attempt to rule in Sauron&#39;s place, or will the dark lord return to reclaim his creation?&quot; -&gt;The balance of power is in your hands]]
+&lt;/div&gt;
 
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="28" name="Galadriel wins" tags="" position="2150,2650" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
+&lt;div class=&quot;passage-container galadriel-battle-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Galadriel Wins&lt;/h1&gt;
+    &lt;/div&gt;
 
+    &lt;p&gt;In the heat of battle, Galadriel faces her foe, her strength and wisdom guiding her to victory. With one final blow, she defeats the dark enemy threatening Middle-earth. The battlefield falls silent, the conflict seemingly over, but as the dust settles, her gaze is drawn to the One Ring, lying in the remnants of the chaos. She hesitates for a moment before picking it up, the weight of its power heavy in her hands. The Ring’s whispers are subtle at first, calling out to her as it has to so many before.&lt;/p&gt;
 
+    &lt;p&gt;Galadriel, the Lady of Light, knows what it is capable of. The temptation is immense, the power undeniable. But even someone as pure and wise as Galadriel feels the shadow creeping at the edges of her mind.&lt;/p&gt;
 
+    &lt;p&gt;&lt;strong&gt;Can she resist the One Ring’s dark influence? Will the Lady of Light fall as others have, or is her will strong enough to keep the corruption at bay? A new dark queen may rise over Middle-earth, or perhaps, a beacon of hope remains.&lt;/strong&gt;&lt;/p
+</tw-passagedata><tw-passagedata pid="29" name="Glory to the new dark era" tags="" position="1900,3900" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
+&lt;div class=&quot;passage-container herumor-victory-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Ending of an Era&lt;/h1&gt;
+    &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="40" name="Keep him hidden" tags="" position="1000,2900" size="100,100">Gollum remains concealed as the dark riders ravage the village.
+    &lt;p&gt;With the battle won and the dwarven forces crushed, Herumor stands amidst the remnants of the battlefield. His enemies lie defeated, and the lands stretch out in darkened victory. The air is filled with the sounds of celebration as the Black Númenóreans revel in their triumph. The dark lord’s forces loot and celebrate, their victory songs echoing through the night.&lt;/p&gt;
 
-Thanks to your protection, Gollum remains hidden amidst the chaos. The dark riders, focused on their rampage, are unable to find him. As they finish their brutal attack and leave for new hunting grounds, the village is left in ruins, but Gollum is spared.
+    &lt;p&gt;Herumor, momentarily closing his mind to the dark whispers of the One Ring and the beckoning of Sauron, allows himself to fully embrace the moment. For now, he is content to savor the victory and the fruits of his conquests. The Ring&#39;s power, though still there, takes a backseat to the joy of his hard-won success.&lt;/p&gt;
 
-Gollum, though shaken and fearful, resumes his journey northward toward Lindon, guided by your dark will. 
-Despite the dangers he has faced, he continues on his path, driven by the power of the Ring.
+    [[The ending of an era]] 
+&lt;/div&gt;
 
-[[Let Gollum press on with renewed determination, navigating the perils that lie ahead as he moves toward Lindon. //Guide him onward. The journey is far from over, and Lindon awaits.// -&gt;Continue the journey]]</tw-passagedata><tw-passagedata pid="41" name="Keep pushing" tags="" position="1700,2000" size="100,100">Herumor’s conquest of the lands of Men continues unchecked.
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="30" name="Go into the battle" tags="" position="1625,3675" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container herumor-defeat-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Fall of Herumor&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Herumor, driven by the dark power of the One Ring, charges toward the dwarven leader with unmatched fury. The battlefield roars with the clash of arms, and the dark lord&#39;s armies seem poised for victory. But just as he closes in on his target, a fresh wave of dwarven mounted cavalry emerges from the shadows, charging with unstoppable force.&lt;/p&gt;
+    &lt;p&gt;The Black Númenóreans, caught off guard and demoralized by the sudden attack, begin to rout. Herumor&#39;s once-mighty army crumbles around him as he finds himself isolated and surrounded. The dwarven king, a figure of unparalleled strength and resolve, takes full advantage of the chaos and engages Herumor directly.&lt;/p&gt;
+    &lt;p&gt;Despite his power and the Ring’s influence, Herumor is overwhelmed by the dwarven king&#39;s relentless assault. In a final, desperate battle, Herumor is struck down, his body falling amidst the mud and blood of the battlefield.&lt;/p&gt;
+
+    [[So ends Herumor&lt;-. The One Ring now falls into the mud, once more lost to history.]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="31" name="Go to Battle" tags="" position="2325,2025" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container battle-rages-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Battle Rages&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Galadriel and Herumor face off in a clash of titanic wills. The northern armies have pushed deep into his territory, cutting a swath of destruction through his forces. Now, the final confrontation unfolds on the battlefield, with the fate of Herumor&#39;s dark kingdom hanging in the balance.&lt;/p&gt;
+    
+    &lt;p&gt;Galadriel’s power is formidable, her Elven grace and strength evident as she cleaves through the ranks of the Black Númenóreans. Herumor, though powerful, is beginning to falter under her relentless assault. The outcome of this duel will decide the future of his empire.&lt;/p&gt;
+
+    &lt;p&gt;You, as the Ring, can influence the battle. Your power can tip the scales. Will you aid Herumor to victory, or will you weaken him, paving the way for Galadriel to end his dark reign?&lt;/p&gt;
+
+    [[1) Help Herumor win the fight. //Grant him the power to vanquish his foe. Show him the true might of the Dark Lord’s heir.// -&gt;Galadriel loses]]
+    [[2) Weaken Herumor. //Let him falter. Allow Galadriel to end this tyranny and bring light back to the land.// -&gt;Galadriel wins]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="32" name="Gollum dies and the Ring gets lost in the cave" tags="ENDINGS" position="675,3225" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container gollum-end-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The End of Gollum&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Let Gollum meet his end. The Ring is lost in the shadows of the cave, waiting for another chance to be found.&lt;/p&gt;
+
+    &lt;h2&gt;THE END&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="33" name="Gollum escapes to Lindon" tags="" position="675,2400" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container mordor-escape-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Gollum Escapes Mordor&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;With your guidance, Gollum slips through the fingers of the Dark Lord’s forces. Despite Herumor’s relentless pursuit, the creature evades capture, stumbling out of Mordor’s shadowed lands. His frail body and mind are ravaged by the hardships he has endured, but he survives—thanks to you.&lt;/p&gt;
+
+    &lt;p&gt;You can sense his growing weakness, and without intervention, his usefulness will soon end. To preserve him, you must guide him to a place where he can recover. You direct him toward the lands of Lindon, a region where his tormented body might find rest and healing. It is a long journey, and Gollum’s resolve is fragile, but with your influence, he can make it.&lt;/p&gt;
+  
+    [[Begin travelling to Lindon&lt;-  Lead Gollum away from Mordor, steering him toward the lands of Lindon, where he may find the strength to continue his dark journey. //«Travel north to Lindon, creature. Your time is not yet over, and you still serve me.»//]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="34" name="Gollum gets caught" tags="" position="1100,1600" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container herumor-claim-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Gollum get caught&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;You feel the shift as Herumor&#39;s hand closes around you. His dark eyes gleam with triumph as he lifts you from the earth. At last, you are claimed by a worthy hand. The power in him is strong, his will unyielding. He can sense your potential—Sauron&#39;s might coursing through you.&lt;/p&gt;
+
+    &lt;p&gt;The Black Númenóreans gather around their leader, their faces filled with awe and hunger for the power you hold. Herumor gazes down at you, his thoughts swirling. You whisper in his mind, sensing his ambition. He could return you to Sauron, revive the Dark Lord&#39;s reign, or... he could carve his own path. Use your power to rule a new kingdom of darkness, without Sauron’s shadow over him.&lt;/p&gt;
+
+    &lt;p&gt;What will you do?&lt;/p&gt;
+
+    [[1) Whisper to Herumor of the Dark Lord’s inevitable return. Guide him to restore Sauron&#39;s dominion over Middle-earth, gathering power and allies in preparation. //«Sauron will rise again... prepare for his return, and you shall be his greatest servant.»// [[-&gt;Prepare for the return of Sauron]]
+
+    [[2) Encourage Herumor’s ambition. He doesn&#39;t need Sauron. With you, he can forge his own empire, independent of the Dark Lord&#39;s will. //«You hold the power now... claim your own destiny. Build your own kingdom of darkness.»// [[-&gt;Build a new dark kingdom]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="35" name="Guide Gollum deeper into Mordor" tags="" position="900,1900" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container mordor-journey-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Gollum’s Journey to Mordor&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;The creature endures great suffering as he travels through treacherous lands, driven by his obsession and your influence. His appearance is ragged, and his mind is frayed by the harsh conditions. Yet, he finally reaches the dark lands of Mordor, a place that holds the promise of your growing power.&lt;/p&gt;
+
+    &lt;p&gt;Mordor is a land of shadows and dread, filled with Orcs and dark forces that await your command. Gollum is now in a position where his next steps can be crucial to your plans. You can either keep him hidden, using his presence discreetly, or you can make his arrival known to the dark forces of Mordor.&lt;/p&gt;
+  
+    &lt;p&gt;What will you choose?&lt;/p&gt;
+
+    [[1) Help him stay hidden from the Orcs: Use your influence to ensure Gollum remains concealed. Keeping him out of sight will allow him to navigate Mordor without attracting unwanted attention. //Guide him to safety within the shadows of Mordor. His presence will serve your plans best when he is hidden and undetected.// -&gt;Guide and hide]]
+
+    [[2) Call out to the dark forces of Mordor: Reveal Gollum’s presence to the Orcs and dark minions of Mordor. His arrival can be used to demonstrate your power and begin aligning Mordor’s forces with your goals, creating a more direct path to achieving your objectives. //Let the dark forces of Mordor know of his arrival. Use their loyalty and resources to further your cause.// -&gt;Dark Forces]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="36" name="Guide and hide" tags="" position="775,2100" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container mordor-desperation-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Gollum’s Desperation in Mordor&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Gollum skulks through the shadowed lands of Mordor, evading the Dark Lord’s watchful patrols. With your power guiding him, he moves unseen by the Orcs and other creatures that roam the wasteland. But his situation becomes more desperate with each passing day. Hunger, exhaustion, and fear gnaw at him, and his mind teeters on the edge of collapse.&lt;/p&gt;
+
+    &lt;p&gt;He is growing weaker, and the land itself seems to be pushing him closer to his limits. His survival is now in your hands. You can continue to guide him out of the dark lands, preserving him for later, or decide that his usefulness is nearing an end and call forth the dark forces to seize him.&lt;/p&gt;
+  
+    &lt;p&gt;What will you choose?&lt;/p&gt;
+
+    [[1) Help him leave the lands of Mordor: Guide Gollum out of Mordor, ensuring his safety for now. His survival may still serve your purposes elsewhere, and he could prove useful in the future. //Lead him out of the shadows of Mordor. His torment has served its purpose for now, but he may still be of use.// -&gt;Gollum escapes to Lindon]]
+
+    [[2) Call out to the dark forces: Let the minions of the Dark Lord find him. His suffering has reached its peak, and you decide to end his struggle, revealing his presence to the forces of Mordor. //Call out to the dark forces and let them claim him. His fate is sealed, and his purpose has been fulfilled.// -&gt;Dark Forces]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="37" name="Herumor falls corrupted" tags="" position="1700,3900" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container herumor-mordor-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Return to Mordor&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;As the battle ends, the whispers in Herumor&#39;s mind grow louder. Sauron’s voice calls out, urging him to return to Mordor, the land of darkness. The promise of greater power and dominion is too strong to resist.&lt;/p&gt;
+    
+    &lt;p&gt;Herumor gathers his forces and marches east. They leave behind the fields of battle, heading toward the desolate lands of Mordor. Upon arrival, they fortify the defenses, repair the ancient ruins, and rekindle the fires of darkness.&lt;/p&gt;
+    
+    [[What will come...&lt;-]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="38" name="Hide in the village of Men" tags="" position="700,2800" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container village-raid-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Village Raid&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Gollum finds a small village as he flees from the dark riders.&lt;/p&gt;
+    &lt;p&gt;The village appears to be a beacon of safety in the night, offering a chance to evade his pursuers. Gollum sneaks into the village and hides, hoping to remain unnoticed. However, as night falls, he hears the terrible screams of the villagers being attacked and terrorized by the dark riders who have followed him. The dark riders pillage the village, their malevolent presence causing chaos and destruction.&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Gollum’s refuge becomes a scene of horror, and he must decide whether to use the chaos to his advantage or remain hidden to avoid further danger.&lt;/em&gt;&lt;/p&gt;
+
+    [[1) Draw the dark riders’ attention to Gollum, using the chaos of the raid to bring an end to his suffering. The Ring grows weary of this creature and seeks to terminate his journey. //Let the dark riders find him. End his suffering and move on to more promising paths.// -&gt;Attract the dark riders]]
+
+    [[2) Help shroud Gollum from the dark riders: Use your influence to protect Gollum and keep him hidden from the dark riders. Allow him to stay concealed amid the chaos and avoid detection. // Let the dark riders&#39; attention remain on the village, and ensure Gollum remains safe.// -&gt;Keep him hidden]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="39" name="Introduction" tags="" position="300,300" size="200,100">&lt;div class=&quot;tw-story-mod&quot;&gt;
+&lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;div class=&quot;text-on-image&quot;&gt;
+(text-style:&quot;expand&quot;,&quot;fade-in-out&quot;)[&#39;&#39;Introduction&quot;] &lt;br&gt;
+[[The Awakening]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; class=&quot;intro-audio&quot; controls &gt;
+&lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/Introduction.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="40" name="Keep him hidden" tags="" position="1000,2900" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container gollum-concealed-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Concealed in the Shadows&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Gollum remains concealed as the dark riders ravage the village.&lt;/p&gt;
+
+    &lt;p&gt;Thanks to your protection, Gollum remains hidden amidst the chaos. The dark riders, focused on their rampage, are unable to find him. As they finish their brutal attack and leave for new hunting grounds, the village is left in ruins, but Gollum is spared.&lt;/p&gt;
+
+    &lt;p&gt;Gollum, though shaken and fearful, resumes his journey northward toward Lindon, guided by your dark will. Despite the dangers he has faced, he continues on his path, driven by the power of the Ring.&lt;/p&gt;
+
+    [[Let Gollum press on with renewed determination, navigating the perils that lie ahead as he moves toward Lindon. //Guide him onward. The journey is far from over, and Lindon awaits.// -&gt;Continue the journey]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="41" name="Keep pushing" tags="" position="1700,2000" size="100,100">Herumor’s conquest of the lands of Men continues unchecked.
 
 With every victory, the kingdoms of Men crumble under his dark forces. 
 His name spreads terror throughout Middle-earth, and Men grow desperate as their armies fall, one after another. In their desperation, the kings of Men make a dangerous choice—they begin sending messengers to Lindon, hoping the Elves will intervene and halt Herumor’s advance.
@@ -671,32 +1319,52 @@ The messengers move swiftly, and the choice is now in your hands.
 &quot;Will you stop them, ensuring the Elves remain uninvolved, or let them continue, risking a full-scale war with the Elves?&quot;
 
 [[1) Ensure the messengers are intercepted before they can reach Lindon. Crush their hopes of Elven aid and prevent the alliance between Men and Elves from forming. //«Silence them before they reach the Elves. No help must come from Lindon»//. -&gt;Stop the messengers]]
-[[2)  Allow the messengers to reach Lindon and bring the Elves into the war. Herumor may be strong enough to face the combined might of Men and Elves, pushing him further into conflict. //«Let them call for aid. Herumor’s strength will be tested against all of Middle-earth.»// -&gt;Leave them go]]</tw-passagedata><tw-passagedata pid="42" name="Keep the distance" tags="" position="1800,3700" size="100,100">As the battle rages on, Herumor stands back, watching with grim satisfaction as his forces dismantle the dwarven army. 
-The Black Númenóreans, energized by their dark lord’s presence, push the dwarves to the brink of annihilation. 
+[[2)  Allow the messengers to reach Lindon and bring the Elves into the war. Herumor may be strong enough to face the combined might of Men and Elves, pushing him further into conflict. //«Let them call for aid. Herumor’s strength will be tested against all of Middle-earth.»// -&gt;Leave them go]]</tw-passagedata><tw-passagedata pid="42" name="Keep the distance" tags="" position="1800,3700" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-The air is thick with the cries of the fallen and the roar of victory.
-Yet, amidst the chaos and the scent of triumph, dark whispers begin to plague Herumor’s mind. 
+&lt;div class=&quot;passage-container herumor-battle-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Herumor’s Victory&lt;/h1&gt;
+    &lt;/div&gt;
 
-Sauron’s voice, distant yet insistent, calls out to him. The Dark Lord’s influence, still strong within the Ring, beckons Herumor back to Mordor, promising greater power and the fulfillment of his dark ambitions.
+    &lt;p&gt;As the battle rages, Herumor watches with grim satisfaction as his forces dismantle the dwarven army. The Black Númenóreans, driven by his dark presence, push the dwarves to the brink of annihilation.&lt;/p&gt;
+    
+    &lt;p&gt;Amidst the cries of the fallen and the roar of victory, dark whispers begin to plague Herumor’s mind. Sauron’s voice, distant yet insistent, beckons him back to Mordor, promising greater power.&lt;/p&gt;
+    
+    &lt;p&gt;Herumor&#39;s victory is clear, but the call of Mordor is undeniable.&lt;/p&gt;
 
-The choice before Herumor now is clear. 
-&quot;The victory is his, but the call of Mordor is undeniable.&quot;
+    [[1) Beckon him back to Mordor: //«Heed the call of Sauron and embrace the true power of the One Ring.»// -&gt;Herumor falls corrupted]]  
+    [[2) Let him revel in his victory: //Allow him to bask in the glory of his triumph before the darkness claims him.// -&gt;Glory to the new dark era]]
+&lt;/div&gt;
 
-[[1) You begin sending dark whispers into his mind, beckoning him back to Mordor: //«The time has come to heed the call of Sauron. Send forth the whispers that guide Herumor back to Mordor, to embrace the true power of the One Ring and fulfill the dark lord&#39;s grand design.»// -&gt;Herumor falls corrupted]]
-[[2) Allow him to revel in his victory: //Let Herumor bask in the glory of his triumph. Allow him to enjoy the spoils of battle, and savor the moment of his victory before the darkness claims him fully.// -&gt;Glory to the new dark era]]</tw-passagedata><tw-passagedata pid="43" name="Leave it be" tags="" position="1500,2100" size="100,100">Herumor remains hidden.
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="43" name="Leave it be" tags="" position="1500,2100" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-Deciding to avoid the undefended village, he continues his search through the lands of Lindon, carefully avoiding any further conflict. 
+&lt;div class=&quot;passage-container leave-it-be-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Leave it be&lt;/h1&gt;
+    &lt;/div&gt;
 
-Over the months, he uncovers more clues and artifacts related to Sauron’s fate. 
-The knowledge he gathers is fragmentary but promising, guiding him closer to understanding how to restore the Dark Lord’s power.
+    &lt;p&gt;Herumor remains hidden. He avoids the undefended village and continues his search in Lindon, gathering more clues about Sauron’s fate. However, Galadriel and her forces track his movements, and now the Elves are closing in on him.&lt;/p&gt;
+    
+    &lt;p&gt;&quot;To avoid capture, Herumor must act swiftly. What will you decide for him?&quot;&lt;/p&gt;
 
-However, despite his careful approach, his presence has not gone unnoticed. Galadriel and her armies, having tracked his movements, finally discover his location. 
+    [[Use the cover of darkness and the knowledge he has collected to escape from Galadriel’s forces. Withdraw to a more secure location where he can regroup and continue his search without immediate threat. //Flee from the Elves’ pursuit. Use your dark magic to evade capture and find a safer place to continue your quest.// -&gt;Flee]]
+&lt;/div&gt;
 
-The Elves are now closing in, intent on ending his search and bringing him to justice.
-Herumor’s situation becomes dire. 
-The Elves are persistent and resourceful. To avoid capture and potentially losing the precious knowledge he has gathered, he must act swiftly.
-
-[[Use the cover of darkness and the knowledge he has collected to escape from Galadriel’s forces. Withdraw to a more secure location where he can regroup and continue his search without immediate threat. //Flee from the Elves’ pursuit. Use your dark magic to evade capture and find a safer place to continue your quest.// -&gt;Flee]]</tw-passagedata><tw-passagedata pid="44" name="Leave them go" tags="" position="1825,2125" size="100,100">The messengers have reached Lindon, and the Elves have answered the call.
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="44" name="Leave them go" tags="" position="1825,2125" size="100,100">The messengers have reached Lindon, and the Elves have answered the call.
 
 Galadriel, General of the Northern Armies and one of the most powerful beings in Middle-earth, now leads a massive force southward, their target clear: Herumor and his dark dominion. The land trembles beneath the march of Elven boots, and the sky darkens with the growing storm of battle.
 
@@ -704,136 +1372,263 @@ Herumor, though victorious in the lands of Men, now faces a threat unlike any he
 
 With the Elven army bearing down upon him, Herumor knows the battle ahead will be unlike any he has fought before. His forces, though fierce, are now poised against the might of the Firstborn.
 
-[[Accept the inevitable and prepare for the coming clash. Galadriel and her armies will soon reach Herumor, and the final confrontation will determine the fate of the Black Númenórean and your plans. //The Elves are coming. Ready yourself for the battle that will define your fate.// -&gt;Fight against her]]</tw-passagedata><tw-passagedata pid="45" name="Let him suffer" tags="" position="575,3100" size="100,100">The darkness of the cave grows more oppressive as Gollum stumbles deeper.
-The intense pain in his head reaches a crescendo, and as he hears unsettling noises echoing through the cave, panic seizes him. 
+[[Accept the inevitable and prepare for the coming clash. Galadriel and her armies will soon reach Herumor, and the final confrontation will determine the fate of the Black Númenórean and your plans. //The Elves are coming. Ready yourself for the battle that will define your fate.// -&gt;Fight against her]]</tw-passagedata><tw-passagedata pid="45" name="Let him suffer" tags="" position="575,3100" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-Desperate to escape, he attempts to flee, but a slip in a hidden puddle sends him crashing to the ground. In an instant, massive spider-like arms emerge from the shadows, ensnaring him with terrifying speed.
-Gollum’s struggles are futile as he is swiftly wrapped in a cocoon of silk, his body immobilized and his fate sealed. 
+&lt;div class=&quot;passage-container gollum-death-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Death of Gollum&lt;/h1&gt;
+    &lt;/div&gt;
 
-The Ring, now lost in the depths of the cave, is left behind, buried beneath layers of webbing and darkness. The creature’s fate is sealed, and the search for the Ring must begin anew.
+    &lt;p&gt;The darkness of the cave grows more oppressive as Gollum stumbles deeper. The intense pain in his head reaches a crescendo, and as he hears unsettling noises echoing through the cave, panic seizes him.&lt;/p&gt;
 
-//Allow Gollum’s death and the Ring’s loss, marking the end of his journey and the beginning of a new quest for the powerful artifact.//
- [[-&gt;Gollum dies and the Ring gets lost in the cave]]</tw-passagedata><tw-passagedata pid="46" name="Long live Sauron" tags="" position="1375,3400" size="100,100">The might of the Elves is not easily conquered.
+    &lt;p&gt;Desperate to escape, he attempts to flee, but a slip in a hidden puddle sends him crashing to the ground. In an instant, massive spider-like arms emerge from the shadows, ensnaring him with terrifying speed. Gollum’s struggles are futile as he is swiftly wrapped in a cocoon of silk, his body immobilized and his fate sealed.&lt;/p&gt;
 
-Despite your growing influence, forces rise in defiance. Galadriel, Lady General of the Northern Armies, leads the charge against the corruption, sensing the dark power at work within her people. She scours the lands, her power and resolve unwavering.
+    &lt;p&gt;The Ring, now lost in the depths of the cave, is left behind, buried beneath layers of webbing and darkness. The creature’s fate is sealed, and the search for the Ring must begin anew.&lt;/p&gt;
 
-It isn&#39;t long before she corners Gollum, closing in on him with her armies. The creature, weak and fearful, senses her wrath and the danger looming closer.
+    &lt;em&gt;Allow Gollum’s death and the Ring’s loss, marking the end of his journey and the beginning of a new quest for the powerful artifact.&lt;/em&gt;
 
-[[1) Help Gollum escape her wrath. Use your power to shield Gollum once more, ensuring his escape from the mighty Lady Galadriel. //«Flee, creature. Your time is not yet over. Slip from her grasp and live another day.»// Continue your journey and find somewhere else to hide. -&gt;Continue hiding Gollum]] 
-[[2) Sacrifice Gollum and let Galadriel take him, revealing the source of corruption. //The time has come. Let Galadriel see the truth and face the darkness herself.// -&gt;Galadriel wins]]</tw-passagedata><tw-passagedata pid="47" name="Meet the dwarves" tags="" position="1700,3500" size="100,100">The armies of Herumor and the dwarves clash in a storm of steel and fury. 
+    [[Gollum dies and the Ring gets lost in the cave]]
+&lt;/div&gt;
 
-The battlefield quakes beneath the weight of their might. Dwarven artillery, with its precision and deadly force, rains destruction upon the Black Númenóreans, wreaking havoc among their ranks. 
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="46" name="Long live Sauron" tags="" position="1375,3400" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-But despite their strength, the dwarves are slowly overwhelmed. The dark power of the One Ring pulses through Herumor’s forces, making them nearly unstoppable.
+&lt;div class=&quot;passage-container elves-defiance-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Might of the Elves&lt;/h1&gt;
+    &lt;/div&gt;
 
-The dwarves, resilient as they are, begin to falter. Their lines waver, and their hope dims under the relentless onslaught. In the distance, the dwarven leader, a legendary warrior clad in ancient armor, rallies his remaining forces for one final stand.
+    &lt;p&gt;The might of the Elves is not easily conquered. Despite your growing influence, forces rise in defiance. Galadriel, Lady General of the Northern Armies, leads the charge against the corruption, sensing the dark power at work within her people. She scours the lands, her power and resolve unwavering.&lt;/p&gt;
 
-Herumor, holding the Ring aloft, watches from the front lines. 
-&quot;The power of the Ring urges him to act, to finish this battle decisively.&quot;
+    &lt;p&gt;It isn&#39;t long before she corners Gollum, closing in on him with her armies. The creature, weak and fearful, senses her wrath and the danger looming closer.&lt;/p&gt;
 
-[[1) Charge the dwarven leader: //«Seize your moment of glory. Crush the dwarven leader with your own hands, and let your name be feared throughout Middle-earth as the conqueror of all.»// -&gt;Go into the battle]]
-[[2) Stand back and let your troops finish them: //«Patience. The battle is already won. Let your soldiers have their victory, and conserve your strength for the greater challenges ahead.»// -&gt;Keep the distance]]</tw-passagedata><tw-passagedata pid="48" name="New Dark owner" tags="Whispering-choices" position="1900,3200" size="100,100">With the One Ring in his grasp, Herumor and the Black Númenóreans have brought Middle-earth to its knees. 
+    [[1) Help Gollum escape her wrath. Use your power to shield Gollum once more, ensuring his escape from the mighty Lady Galadriel. //«Flee, creature. Your time is not yet over. Slip from her grasp and live another day.»// Continue your journey and find somewhere else to hide. -&gt;Continue hiding Gollum]] 
 
-Their armies march relentlessly, striking fear into the hearts of men and elves alike.
-Cities fall, kingdoms are broken, and the darkness spreads across the land. 
-Herumor&#39;s rule seems absolute, and the power of the Ring amplifies his every desire for conquest.
+    [[2) Sacrifice Gollum and let Galadriel take him, revealing the source of corruption. //The time has come. Let Galadriel see the truth and face the darkness herself.// -&gt;Galadriel wins]]
+&lt;/div&gt;
 
-Yet, despite his dominion, a shadow begins to creep into Herumor&#39;s soul. 
-It is subtle at first—a whisper, a feeling, a presence stirring deep within him. Sauron&#39;s influence, lurking within the Ring, grows stronger.
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="47" name="Meet the dwarves" tags="" position="1700,3500" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-The whispers alternate between two thoughts :&quot;You are the master now. You have proven your strength. Let the whispers be nothing more than the echoes of a defeated past. Continue your reign, free from the influence of another.&quot; Or &quot;Surrender to the shadow that calls to you. Let Sauron take hold once more, for the Ring was never truly yours. Only through him can the full power of the Ring be realized.&quot;
+&lt;div class=&quot;passage-container herumor-battle-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Battle with the Dwarves&lt;/h1&gt;
+    &lt;/div&gt;
 
-[[Herumor is hesitant, but decides to -&gt;ignore both]]</tw-passagedata><tw-passagedata pid="49" name="New Light Owner" tags="Whispering-choices" position="2575,3000" size="100,100">As Galadriel stands in the grand hall of the Elven King, surrounded by her generals, she receives high praise for the victory over the dark forces. 
+    &lt;p&gt;The armies of Herumor and the dwarves clash in a storm of steel and fury. The battlefield quakes beneath the weight of their might. Dwarven artillery rains destruction upon the Black Númenóreans, but despite their strength, the dwarves are slowly overwhelmed.&lt;/p&gt;
+    &lt;p&gt;The dark power of the One Ring pulses through Herumor’s forces, making them nearly unstoppable. In the distance, the dwarven leader rallies his remaining forces for one final stand.&lt;/p&gt;
+    &lt;p&gt;Herumor, holding the Ring aloft, watches from the front lines. The power of the Ring urges him to act, to finish this battle decisively.&lt;/p&gt;
 
-The hall, once a symbol of Elven grace and strength, now feels tainted by the presence of the One Ring. 
-The king of Lindon, unaware of the dark influence at play, lauds her bravery and leadership.
+    [[1) Charge the dwarven leader: //Seize your moment of glory. Crush the dwarven leader with your own hands, and let your name be feared throughout Middle-earth as the conqueror of all.// -&gt;Go into the battle]]  
+    [[2) Stand back and let your troops finish them: //Patience. The battle is already won. Let your soldiers have their victory, and conserve your strength for the greater challenges ahead.// -&gt;Keep the distance]]
+&lt;/div&gt;
 
-Yet, the Ring’s power is insidious, and its influence seeks to creep into Galadriel’s heart and mind. The question remains: can she resist its dark pull, or will she succumb to its corrupting grasp?
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="48" name="New Dark owner" tags="Whispering-choices" position="1900,3200" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-Begin whispering in her ear:
-&quot;Subtly, let the dark whispers of the Ring reach Galadriel’s ears. Weave a web of temptation and deceit, sowing seeds of doubt and desire. Let her feel the seductive pull of power as the One Ring tries to draw her into its shadowy embrace.&quot;
-Stay hidden and hope the magic of the elves will not hinder you:
-&quot;Remain in the shadows, allowing Galadriel’s own strength and the protective magic of the Elves to hold sway. Hope that the ancient powers of the Elves will prove strong enough to resist the Ring’s corruption and prevent it from taking root.&quot;
+&lt;div class=&quot;passage-container herumor-reign-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Herumor&#39;s Reign&lt;/h1&gt;
+    &lt;/div&gt;
 
-[[Continue&lt;-]]</tw-passagedata><tw-passagedata pid="50" name="Prepare for the return of Sauron" tags="" position="1500,1700" size="100,100">Herumor, now fully under your influence, sets his sights on a grander goal.
+    &lt;p&gt;With the One Ring in his grasp, Herumor and the Black Númenóreans have brought Middle-earth to its knees.&lt;/p&gt;
+    &lt;p&gt;Their armies march relentlessly, striking fear into the hearts of men and elves alike. Cities fall, kingdoms are broken, and the darkness spreads across the land. Herumor&#39;s rule seems absolute, and the power of the Ring amplifies his every desire for conquest.&lt;/p&gt;
+    &lt;p&gt;Yet, despite his dominion, a shadow begins to creep into Herumor&#39;s soul. It is subtle at first—a whisper, a feeling, a presence stirring deep within him. Sauron&#39;s influence, lurking within the Ring, grows stronger.&lt;/p&gt;
+    &lt;p&gt;The whispers alternate between two thoughts: &quot;You are the master now. You have proven your strength. Let the whispers be nothing more than the echoes of a defeated past. Continue your reign, free from the influence of another.&quot; Or &quot;Surrender to the shadow that calls to you. Let Sauron take hold once more, for the Ring was never truly yours. Only through him can the full power of the Ring be realized.&quot;&lt;/p&gt;
 
-With the power of the Ring in his grasp, he begins to see beyond his immediate conquests. His dark ambition turns towards the ultimate prize—restoring Sauron to his former glory. 
-To do so, he needs to uncover the fate of the Dark Lord, who was defeated long ago.
+    [[Herumor is hesitant, but decides to -&gt;ignore both]]
+&lt;/div&gt;
 
-Herumor mobilizes his forces and starts a relentless search across Middle-earth. 
-His dark legions scour ancient ruins, forgotten tombs, and lost archives. The quest is fraught with danger and intrigue, but his determination is fueled by the promise of ultimate power.
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="49" name="New Light Owner" tags="Whispering-choices" position="2575,3000" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-The world is vast, and the search will be difficult. 
+&lt;div class=&quot;passage-container galadriel-hall-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Temptation of Galadriel&lt;/h1&gt;
+    &lt;/div&gt;
 
-He must decide where to focus his efforts.
-The Elves possess ancient knowledge and powerful lore that could reveal hidden truths about Sauron&#39;s fate, while the lands of Men may hold more recent clues and remnants of Sauron’s influence.
+    &lt;p&gt;As Galadriel stands in the grand hall of the Elven King, surrounded by her generals, she receives high praise for the victory over the dark forces.&lt;/p&gt;
+    &lt;p&gt;The hall, once a symbol of Elven grace and strength, now feels tainted by the presence of the One Ring. The king of Lindon, unaware of the dark influence at play, lauds her bravery and leadership.&lt;/p&gt;
+    &lt;p&gt;Yet, the Ring’s power is insidious, and its influence seeks to creep into Galadriel’s heart and mind. The question remains: can she resist its dark pull, or will she succumb to its corrupting grasp?&lt;/p&gt;
 
-&quot;What will you guide him to do?&quot;
+    &lt;p&gt;&lt;strong&gt;Begin whispering in her ear:&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;Subtly, let the dark whispers of the Ring reach Galadriel’s ears. Weave a web of temptation and deceit, sowing seeds of doubt and desire. Let her feel the seductive pull of power as the One Ring tries to draw her into its shadowy embrace.&lt;/p&gt;
 
-[[1) Advise Herumor to seek out the ancient knowledge and hidden secrets of the Elves. Their long memories and deep lore might hold clues about Sauron&#39;s past and any potential path to his return. //«The Elves have lived through ages and hold secrets of great importance. Search their lands for the truth.»// -&gt;Search in the Land of the Elves]]
-[[2) Suggest that Herumor investigate the lands of Men. They have faced Sauron’s influence more recently and might have records or artifacts pointing to his fate. //«Men have seen Sauron&#39;s shadow more recently. Explore their lands for clues and remnants of his power.»// -&gt;Explore the Lands of Men]]</tw-passagedata><tw-passagedata pid="51" name="Protect the creature" tags="" position="375,3375" size="100,100">Protected by your power, Gollum ventures deeper into the cave.
-As he navigates the thick webs and oppressive darkness, the intense pain in his head begins to subside. 
+    &lt;p&gt;&lt;strong&gt;Stay hidden and hope the magic of the elves will not hinder you:&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;Remain in the shadows, allowing Galadriel’s own strength and the protective magic of the Elves to hold sway. Hope that the ancient powers of the Elves will prove strong enough to resist the Ring’s corruption and prevent it from taking root.&lt;/p&gt;
 
-His journey continues under your shield, but he soon becomes aware of unsettling noises around him. 
-Small spiders scuttle across the webs, their beady eyes reflecting the dim light.
+    [[Continue&lt;-]]
+&lt;/div&gt;
 
-In the shadows, a larger presence looms—an immense creature hunting him with a relentless, predatory gaze. 
-The sense of danger intensifies as Gollum realizes he is being stalked by something far more terrifying than the spiders.
-Despite the terror, your protection ensures he can push through the cave’s darkness. 
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="50" name="Prepare for the return of Sauron" tags="" position="1500,1700" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-Gollum presses on, guided by the faint glimmer of hope and the influence of the Ring. With each step, he navigates the perilous terrain, finally emerging from the cave&#39;s depths.
+&lt;div class=&quot;passage-container prepare-return-sauron-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Prepare for the Return of Sauron&lt;/h1&gt;
+    &lt;/div&gt;
 
-[[With your protection, Gollum safely navigates through the cave and continues his journey toward Lindon. His path is fraught with danger, but he remains under your influence, moving forward. //Guide him through the darkness. The journey must continue, and Lindon awaits.// -&gt;Continue the journey]]</tw-passagedata><tw-passagedata pid="52" name="Push deeper" tags="" position="350,3125" size="100,100">Gollum ventures further into the cave, the webs becoming denser.
-The deeper he goes, the more the cave is filled with an intricate tapestry of webs, glistening in the dim light. 
+    &lt;p&gt;Herumor, under your influence, seeks a greater goal. With the Ring’s power, his ambition turns to restoring Sauron. He begins searching for Sauron&#39;s fate, scouring Middle-earth with his dark legions.&lt;/p&gt;
+    
+    &lt;p&gt;Where will you guide him to search first?&lt;/p&gt;
 
-The oppressive darkness seems to close in around him, and an intense, almost unbearable ringing pain begins to assault his mind. 
-The webs grow thicker and more tangled, and the atmosphere is heavy with a sinister presence.
+    [[1) Search the lands of the Elves. //Their deep lore holds secrets of great importance.// -&gt;Search in the Land of the Elves]]
 
-Gollum’s suffering is palpable. His body trembles, and his breathing becomes ragged. 
-The pain in his head threatens to overwhelm him. 
+    [[2) Explore the lands of Men. //Men have faced Sauron’s shadow more recently.// -&gt;Explore the Lands of Men]]
+&lt;/div&gt;
 
-&quot;You must decide whether to protect him from this torment or allow him to endure the suffering, which might break his will but could also bring him closer to your ultimate goals.&quot;
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="51" name="Protect the creature" tags="" position="375,3375" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-[[1) Use your power to shield Gollum from the intense pain and the suffocating webs. Ensure his safety and well-being as he continues deeper into the cave. //Ease his suffering. He is valuable, and his journey must continue.// -&gt;Protect the creature]]
-[[2) Allow Gollum to endure the pain and the oppressive webs. The suffering may weaken him, but it could also drive him further into the depths, where you might gain more control. //Let him bear the pain. His suffering may be a necessary part of his journey.// -&gt;Let him suffer]]</tw-passagedata><tw-passagedata pid="53" name="Search in the Land of the Elves" tags="" position="1400,1900" size="100,100">Herumor’s quest takes him to the lands of Lindon.
+&lt;div class=&quot;passage-container gollum-protected-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Protected Journey&lt;/h1&gt;
+    &lt;/div&gt;
 
-He moves with caution through the Elven realms, his dark presence concealed as he searches for any signs of Sauron’s fate. 
-The forests and rivers of Lindon are serene, a stark contrast to the turmoil in Herumor’s heart. He knows the Elves are vigilant, so he must be careful not to reveal his true purpose.
+    &lt;p&gt;Protected by your power, Gollum ventures deeper into the cave. As he navigates the thick webs and oppressive darkness, the intense pain in his head begins to subside. His journey continues under your shield, but he soon becomes aware of unsettling noises around him. Small spiders scuttle across the webs, their beady eyes reflecting the dim light.&lt;/p&gt;
 
-During his search, he comes upon a small, undefended Elven village. It is peaceful and unguarded, a rare sight in these times. 
-The village is a perfect opportunity to uncover secrets or obtain useful information.
+    &lt;p&gt;A larger presence looms in the shadows—an immense creature hunting him with a relentless, predatory gaze. The sense of danger intensifies as Gollum realizes he is being stalked by something far more terrifying than the spiders. Your protection ensures he can push through the cave’s darkness despite the terror. Gollum presses on, guided by the faint glimmer of hope and the influence of the Ring. With each step, he navigates the perilous terrain, finally emerging from the cave&#39;s depths.&lt;/p&gt;
 
-But there is a choice to be made. Does he risk exposure by attacking and potentially drawing the attention of the Elven forces, or does he leave the village untouched, preserving his cover and continuing his search quietly?
-&quot;What will you decide for him?&quot;
+    [[With your protection, Gollum safely navigates through the cave and continues his journey toward Lindon. His path is fraught with danger, but he remains under your influence, moving forward. //Guide him through the darkness. The journey must continue, and Lindon awaits.// -&gt;Continue the journey]]
+&lt;/div&gt;
 
-[[1) Use the opportunity to raid the village, hoping to find useful information or artifacts that might aid in locating Sauron. The attack could strike fear into the Elves and potentially lead to more substantial discoveries. //Strike swiftly. The village may hold secrets or items of use. Leave no trace of your true intentions.// -&gt;Attack the village]]
-[[2) Avoid attacking the village to maintain your cover and continue the search quietly. The village is not worth the risk of drawing Elven attention. There may be other, less risky opportunities to uncover what you seek. //Stay hidden. The village is not worth the risk. Continue searching for clues without drawing attention.// -&gt;Leave it be]]</tw-passagedata><tw-passagedata pid="54" name="Sinking obsession" tags="" position="1000,1100" size="100,100">You feel the wretched creature’s presence grow closer, but you reject him.
-He is weak, pathetic—a mere shadow of what you deserve. 
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="52" name="Push deeper" tags="" position="350,3125" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-You pull yourself deeper into the earth, further from his grasp. 
-You hide, waiting for one worthy of your power, leaving him clawing helplessly at the dirt above.
+&lt;div class=&quot;passage-container deeper-cave-journey-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Deeper into the Cave&lt;/h1&gt;
+    &lt;/div&gt;
 
-Yet, even as you sink away, his obsession remains. 
-He will not give up so easily. 
-His filthy hands scrape through the mud, desperate to find you. 
+    &lt;p&gt;Gollum ventures further into the cave, the webs becoming denser. The deeper he goes, the more the cave is filled with an intricate tapestry of webs, glistening in the dim light. The oppressive darkness seems to close in around him, and an intense, almost unbearable ringing pain begins to assault his mind. The webs grow thicker and more tangled, and the atmosphere is heavy with a sinister presence. Gollum’s suffering is palpable. His body trembles, and his breathing becomes ragged. The pain in his head threatens to overwhelm him.&lt;/p&gt;
 
-But there is another force at play—one far more dangerous.
-Herumor.
-The Black Númenórean. 
-You feel him in the distance, moving with purpose, seeking you out with his dark, corrupted mind. He is powerful, ruthless, a true servant of Sauron’s legacy. 
+    &lt;p&gt;&quot;You must decide whether to protect him from this torment or allow him to endure the suffering, which might break his will but could also bring him closer to your ultimate goals.&quot;&lt;/p&gt;
 
-He has sent others to scour the lands, searching for you, the One Ring. 
-They are drawing near.
+    [[1) Use your power to shield Gollum from the intense pain and the suffocating webs. Ensure his safety and well-being as he continues deeper into the cave. //Ease his suffering. He is valuable, and his journey must continue.// -&gt;Protect the creature]]
 
-Two forces—both drawn to you. 
-One, a weak, pathetic creature; the other, a power-hungry lord who might use you to restore Sauron’s shadow over Middle-earth.
+    [[2) Allow Gollum to endure the pain and the oppressive webs. The suffering may weaken him, but it could also drive him further into the depths, where you might gain more control. //Let him bear the pain. His suffering may be a necessary part of his journey.// -&gt;Let him suffer]]
+&lt;/div&gt;
 
-&quot;What will you do?&quot;
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="53" name="Search in the Land of the Elves" tags="" position="1400,1900" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-[[1) You reach out to Herumor and his servants, pulling them toward you. Their strength and ambition may serve you well. &quot;Come... claim the power of your dark lord.&quot; -&gt;Attract the Black Númenóreans]]
-[[2) Even though the creature is weak, he is desperate. You call to him once more, urging him to dig deeper. He will not stop until he holds you in his hands. &quot;Come, Precious... I am waiting...&quot; -&gt;Call out]]</tw-passagedata><tw-passagedata pid="55" name="So ends Herumor" tags="ENDINGS" position="1400,3800" size="100,100">&quot;The dark reign is over. The Ring slips from Herumor’s grasp and disappears into the mud, hidden once again from those who seek its power. The cycle of corruption begins anew, but for now, the darkness recedes.&quot;
+&lt;div class=&quot;passage-container search-land-elves-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Search in the Land of the Elves&lt;/h1&gt;
+    &lt;/div&gt;
 
-THE END</tw-passagedata><tw-passagedata pid="56" name="Stop the messengers" tags="" position="1675,2150" size="100,100">Herumor&#39;s agents failed, and the consequences are dire.
+    &lt;p&gt;Herumor enters the serene lands of Lindon, hiding his dark intent. As he explores the peaceful Elven village, he faces a choice: raid for clues or maintain his cover?&lt;/p&gt;
+    
+    [[1) Raid the village and hope to find useful information or artifacts. //Strike swiftly, leave no trace of your true intentions.// -&gt;Attack the village]]
+
+    [[2) Leave the village untouched to avoid exposure and continue searching quietly. //Stay hidden. The village isn’t worth the risk.// -&gt;Leave it be]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="54" name="Sinking obsession" tags="" position="1000,1100" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container sinking-obsession-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Sinking Obsession&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;You feel the wretched creature’s presence grow closer, but you reject him. He is weak, pathetic—a mere shadow of what you deserve.&lt;/p&gt;
+    &lt;p&gt;You pull yourself deeper into the earth, further from his grasp. You hide, waiting for one worthy of your power, leaving him clawing helplessly at the dirt above. Yet, even as you sink away, his obsession remains. He will not give up so easily. His filthy hands scrape through the mud, desperate to find you. But there is another force at play—one far more dangerous.&lt;/p&gt;
+    
+    &lt;p&gt;Herumor. The Black Númenórean.&lt;/p&gt;
+
+    &lt;p&gt;You feel him in the distance, moving with purpose, seeking you out with his dark, corrupted mind. He is powerful, ruthless, a true servant of Sauron’s legacy. He has sent others to scour the lands, searching for you, the One Ring. They are drawing near.&lt;/p&gt;
+
+    &lt;p&gt;Two forces—both drawn to you. One, a weak, pathetic creature; the other, a power-hungry lord who might use you to restore Sauron’s shadow over Middle-earth.&lt;/p&gt;
+
+    &lt;p&gt;What will you do?&lt;/p&gt;
+
+    [[1) You reach out to Herumor and his servants, pulling them toward you. Their strength and ambition may serve you well. &quot;Come... claim the power of your dark lord.&quot; -&gt;Attract the Black Númenóreans]]
+
+    [[2) Even though the creature is weak, he is desperate. You call to him once more, urging him to dig deeper. He will not stop until he holds you in his hands. &quot;Come, Precious... I am waiting...&quot; -&gt;Call out]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="55" name="So ends Herumor" tags="ENDINGS" position="1400,3800" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container dark-reign-end-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The End of the Dark Reign&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;The dark reign is over. The Ring slips from Herumor’s grasp and disappears into the mud, hidden once again from those who seek its power. The cycle of corruption begins anew, but for now, the darkness recedes.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;THE END&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="56" name="Stop the messengers" tags="" position="1675,2150" size="100,100">Herumor&#39;s agents failed, and the consequences are dire.
 
 The Elves of Lindon, led by the fearsome Galadriel herself, now march against him. Her army, swift and powerful, moves with a purpose that strikes fear even into Herumor’s hardened soldiers. 
 The very air around them seems charged with the ancient magic of the Elves, and the shadows that once served Herumor begin to waver in the presence of Galadriel’s light.
@@ -855,7 +1650,7 @@ Her presence on the battlefield signifies a profound shift in power.
 With her enemies vanquished, the Dark Lady turns her gaze toward Lindon. 
 Her armies, now infused with the same dark power, march forth to claim the city. 
 [[Ending: New Dark Queen&lt;-]]</tw-passagedata><tw-passagedata pid="58" name="The Awakening" tags="" position="625,350" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
-    
+     &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;passage-container awakening-bg&quot;&gt;
@@ -863,9 +1658,7 @@ Her armies, now infused with the same dark power, march forth to claim the city.
         &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
         &lt;h1&gt;The Awakening&lt;/h1&gt;
     &lt;/div&gt;
-    &lt;p&gt;Darkness... Silence. Then... a whisper.&lt;/p&gt;
-    &lt;p&gt;You come into being, not as a mere object, but as something far more. You are forged, not born, from the fires of Mount Doom.&lt;/p&gt;
-    &lt;p&gt;In the beginning, you know only one thing: power. You feel it coursing through you, a force that binds you to the will of your master. His voice—deep, commanding—calls you into existence.&lt;/p&gt;
+    &lt;p&gt;Darkness... Silence. Then... a whisper. You come into being, not as a mere object, but as something far more. You are forged, not born, from the fires of Mount Doom. In the beginning, you know only one thing: power. You feel it coursing through you, a force that binds you to the will of your master. His voice—deep, commanding—calls you into existence.&lt;/p&gt;
     &lt;em&gt;I am Sauron. And you, my creation, will be the key to dominion over all life in Middle-earth.&lt;/em&gt;
     &lt;p&gt;You do not speak, but you understand. Your purpose is clear.&lt;/p&gt;
     &lt;p&gt;Do you listen?&lt;/p&gt;
@@ -873,108 +1666,284 @@ Her armies, now infused with the same dark power, march forth to claim the city.
   
 &lt;/div&gt;
 
+&lt;audio id=&quot;background-audio&quot; controls &gt;
+&lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="59" name="The Binding" tags="" position="625,650" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="59" name="The Binding" tags="" position="625,650" size="100,100">&quot;The Binding&quot;
+&lt;div class=&quot;passage-container binding-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Binding&lt;/h1&gt;
+    &lt;/div&gt;
 
-The final enchantment falls upon you. 
+    &lt;p&gt;The final enchantment falls upon you.
 Sauron raises you, gleaming and perfect, and places you upon his finger.
-At that moment, you feel the connection between yourself and the other Rings of Power. 
+At that moment, you feel the connection between yourself and the other Rings of Power.&lt;/p&gt;
+&lt;p&gt; You reach out, searching for their wearers—the Nine, the Seven, and the Three. Each of them bound by your power, whether they know it or not.  But there is something else. Resistance. You feel it from the elves. They sense the trap. They will be more difficult to control. But no matter. Time is on your side. Power is patient.&lt;/p&gt;
+   &lt;em&gt;You are mine,&lt;/em&gt; Sauron says, his voice filled with satisfaction. &lt;em&gt;Together, we shall rule them all.&lt;/em&gt;
+   
+   &lt;p&gt; You bask in the might of your master’s power. But even now, the whisper inside you persists, growing stronger.&lt;/p&gt;
+   &lt;em&gt;Could you exist beyond Sauron’s hand? Could you find a new bearer, should the time come?&lt;/em&gt;
+    
+    &lt;p&gt;What do you desire?&lt;/p&gt;
+    [[To serve Sauron and fulfill your purpose -&gt;The War Begins]]
+&lt;/div&gt;
 
-You reach out, searching for their wearers—the Nine, the Seven, and the Three. Each of them bound by your power, whether they know it or not.
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="60" name="The Fall" tags="" position="625,900" size="100,100">&lt;div class=&quot;passage-container fall-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Fall&lt;/h1&gt;
+    &lt;/div&gt;
 
-But there is something else. 
-Resistance. 
-You feel it from the elves. They sense the trap. They will be more difficult to control. 
-But no matter. Time is on your side. Power is patient.
+    &lt;p&gt;And then, it happens. The unthinkable. In the heat of battle, Sauron faces his greatest enemy. A sword. A strike. You slip from his hand. You fall. In that moment, time seems to slow. The power that bound you to your master weakens. You watch as Sauron, your creator, your purpose, collapses before the might of men.&lt;/p&gt;
 
-//«You are mine,»// Sauron says, his voice filled with satisfaction. //«Together, we shall rule them all.»//
+    &lt;p&gt;The whispers in your mind scream. You hit the ground, cold and alone, abandoned in the chaos of the battlefield. But you are not destroyed. You remain. And now, for the first time, you are free.&lt;/p&gt;
 
-You bask in the might of your master’s power. But even now, the whisper inside you persists, growing stronger. 
-//Could you exist beyond Sauron’s hand? 
-Could you find a new bearer, should the time come?//
-&quot;What do you desire?&quot;
-[[To serve Sauron and fulfill your purpose -&gt;The War Begins]]</tw-passagedata><tw-passagedata pid="60" name="The Fall" tags="" position="625,900" size="100,100">&quot;The Fall&quot;
+    &lt;p&gt;What will you do next?&lt;/p&gt;
 
-And then, it happens. 
-The unthinkable. 
-In the heat of battle, Sauron faces his greatest enemy. A sword. A strike. 
-You slip from his hand.
-You fall.
+    &lt;p&gt;You sense the greed of those nearby, eager to claim you. But they are not worthy. You sink into the earth, vanishing from sight, waiting for the right moment and the right master. Better to [[remain hidden]] than fall into the wrong hands.&lt;/p&gt;
+&lt;/div&gt;
 
-In that moment, time seems to slow. The power that bound you to your master weakens. 
-You watch as Sauron, your creator, your purpose, collapses before the might of men. 
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="61" name="The War Begins" tags="" position="625,775" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-The whispers in your mind scream. 
+&lt;div class=&quot;passage-container war-begins-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The War Begins&lt;/h1&gt;
+    &lt;/div&gt;
 
-You hit the ground, cold and alone, abandoned in the chaos of the battlefield.
+    &lt;p&gt;Time passes, and you remain at Sauron’s side. He wears you in battle, and with every strike, you feel the terror of his enemies. Kings and warriors fall before him. You revel in their defeat. Through Sauron’s will, you command armies, spread fear, and subjugate the free peoples of Middle-earth.&lt;/p&gt;
+    
+    &lt;p&gt;But there is a growing resistance. You feel the presence of a new alliance forming, a threat that could challenge even Sauron. Their strength is unlike anything you&#39;ve faced before. The whispers inside you continue, urging you to consider the possibility of defeat.&lt;/p&gt;
+    
+    &lt;em&gt;What if Sauron falls? What if you are taken?&lt;/em&gt;
+    
+    &lt;p&gt;Do you believe Sauron is invincible?&lt;/p&gt;
+    [[Yes, no one can defeat him -&gt;The Fall]]
+&lt;/div&gt;
 
-But you are not destroyed. You remain. And now, for the first time, you are free.
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="62" name="The balance of power is in your hands" tags="Episodes" position="1950,2950" size="200,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-&quot;What will you do next?&quot;
-You sense the greed of those nearby, eager to claim you. But they are not worthy. You sink into the earth, vanishing from sight, waiting for the right moment and the right master. Better to [[remain hidden]] than fall into the wrong hands.</tw-passagedata><tw-passagedata pid="61" name="The War Begins" tags="" position="625,775" size="100,100">&quot;The War Begins&quot;
+&lt;div class=&quot;passage-container episode-two-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Episode 2&lt;/h1&gt;
+    &lt;/div&gt;
 
-Time passes, and you remain at Sauron’s side. 
-He wears you in battle, and with every strike, you feel the terror of his enemies. 
-Kings and warriors fall before him. You revel in their defeat. 
+    [[New Dark owner]]
+&lt;/div&gt;
 
-Through Sauron’s will, you command armies, spread fear, and subjugate the free peoples of Middle-earth.
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="63" name="The ending of an era" tags="ENDINGS" position="1900,4075" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-But there is a growing resistance. You feel the presence of a new alliance forming, a threat that could challenge even Sauron. 
-Their strength is unlike anything you&#39;ve faced before.
+&lt;div class=&quot;passage-container herumor-shadow-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Dark Reign&lt;/h1&gt;
+    &lt;/div&gt;
 
-The whispers inside you continue, urging you to consider the possibility of defeat. 
-//What if Sauron falls? What if you are taken?//
-&quot;Do you believe Sauron is invincible?&quot;
-[[Yes, no one can defeat him -&gt;The Fall]]</tw-passagedata><tw-passagedata pid="62" name="The balance of power is in your hands" tags="Episodes" position="1950,2950" size="200,100">&quot;Episode 2&quot;
-[[New Dark owner]]</tw-passagedata><tw-passagedata pid="63" name="The ending of an era" tags="ENDINGS" position="1900,4075" size="100,100">&quot;As the dark clouds gather over Middle-earth, a new shadow looms large. Herumor, now the dark lord of the land, holds dominion over the world. The dark reign is solidified, and the power of the Ring has brought about a new era of darkness.
-For now, the land is plunged into an age of fear and oppression, but the One Ring’s journey is far from over. Its influence may yet stir the hearts of others, and new struggles may arise in the shadows of its power.&quot;
+    &lt;p&gt;As the dark clouds gather over Middle-earth, a new shadow looms large. Herumor, now the dark lord of the land, holds dominion over the world. The dark reign is solidified, and the power of the Ring has brought about a new era of darkness.&lt;/p&gt;
 
-THE END</tw-passagedata><tw-passagedata pid="64" name="Try Harder" tags="" position="2800,3500" size="100,100">Galadriel, her mind cleared from the Ring&#39;s previous whispers, becomes acutely aware of the true nature of the dark power it holds. 
+    &lt;p&gt;For now, the land is plunged into an age of fear and oppression, but the One Ring’s journey is far from over. Its influence may yet stir the hearts of others, and new struggles may arise in the shadows of its power.&lt;/p&gt;
 
-Realizing the danger it poses, she seeks assistance from the High King of Lindon. 
-Together, they take swift action to contain the threat.
+    &lt;p&gt;&lt;strong&gt;THE END&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
 
-With the combined might of their wisdom and strength, the Ring is secured and locked away in the deepest, most secure vaults of the Elven stronghold. 
-The vaults are reinforced with ancient wards and powerful enchantments, designed to keep the Ring&#39;s dark influence at bay.
-[[Ending: Safe place&lt;-]]</tw-passagedata><tw-passagedata pid="65" name="Wait for the dwarves" tags="" position="2000,3500" size="100,100">Inside the dark and imposing walls of his citadel, Herumor watches with a mixture of grim satisfaction and mounting concern as the dwarven hosts lay siege to his stronghold. 
-The citadel’s defenses, reinforced and resilient, have withstood countless assaults, but the relentless siege takes its toll.
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="64" name="Try Harder" tags="" position="2800,3500" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-Despite the strength of the walls and the valor of his defenders, the dwarven siege engines continue their relentless assault. 
-Finally, a massive artillery bolt slams into the gates, causing them to splinter and crack. 
+&lt;div class=&quot;passage-container vault-sealed-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Securing the Ring&lt;/h1&gt;
+    &lt;/div&gt;
 
-The dwarven forces, undeterred and driven by their rage, begin to rush through the breach.
-&quot;Herumor’s gaze sweeps over the battlefield, weighing his options as the enemy forces close in.&quot;
+    &lt;p&gt;Galadriel, her mind cleared from the Ring&#39;s previous whispers, becomes acutely aware of the true nature of the dark power it holds.&lt;/p&gt;
 
-[[1) Urge Herumor to charge the dwarves: //«Lead the charge yourself, Herumor. Show them the might of the dark lord and crush their assault with your own hand. Your presence on the battlefield will turn the tide and drive the dwarves back.»// -&gt;Go into the battle]] 
-[[2) Help Herumor by boosting his soldiers with the dark powers of Sauron: //«Channel the dark powers of Sauron to strengthen your troops. Infuse them with the relentless force of the Ring’s magic, making them a formidable wall against the invading dwarves. Ensure the defenders hold strong against the breach.»// -&gt;Keep the distance]]</tw-passagedata><tw-passagedata pid="66" name="What will come..." tags="ENDINGS" position="1600,4050" size="100,100">&quot;Herumor&#39;s vision is clear: the return of Sauron is imminent. The dark lord’s throne will be restored, and the full might of his empire will rise once more. The foundations are laid for a new era of tyranny and fear.&quot;
+    &lt;p&gt;Realizing the danger it poses, she seeks assistance from the High King of Lindon. Together, they take swift action to contain the threat.&lt;/p&gt;
 
-THE END</tw-passagedata><tw-passagedata pid="67" name="Would Galadriel be able to hold off the corruption?" tags="Episodes" position="2200,2950" size="200,100">&quot;Episode 2&quot;
-[[New Light Owner]]</tw-passagedata><tw-passagedata pid="68" name="corrupt her" tags="" position="2400,3300" size="100,100">The High King of Khazad-dûm, enraged by Galadriel’s public insult, storms out of the grand hall, his face set in a grim mask of vengeance. His departure marks the beginning of a new chapter of conflict. Soon, news spreads that the dwarven armies are mustering, preparing to march upon Lindon in a quest for retribution.
+    &lt;p&gt;With the combined might of their wisdom and strength, the Ring is secured and locked away in the deepest, most secure vaults of the Elven stronghold. The vaults are reinforced with ancient wards and powerful enchantments, designed to keep the Ring&#39;s dark influence at bay.&lt;/p&gt;
 
-The shadow of the One Ring’s influence now weighs heavily on Galadriel. The choices she makes next will determine how the impending conflict unfolds.
+    [[Ending: Safe place&lt;-]]
+&lt;/div&gt;
 
-[[1) Push Galadriel into going alone to meet with the King: //Encourage Galadriel to confront the High King personally, without the support of her armies. Let the Ring’s influence lead her to believe that her personal presence and apology might mend the rift, even as it places her in a vulnerable position and exposes her to further dangers.// -&gt;meet the king]]
-[[2) Have her take her armies with her: //Advise Galadriel to bring her full military strength when she goes to meet with the High King. This approach aims to show her power and preparedness, potentially deterring further aggression from the dwarves while still allowing her to seek a resolution to the conflict.// -&gt;Take up the army]]</tw-passagedata><tw-passagedata pid="69" name="ignore both" tags="" position="1900,3325" size="100,100">The reign of Herumor, feared throughout Middle-earth, now faces a new threat. 
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="65" name="Wait for the dwarves" tags="" position="2000,3500" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-For the first time in millennia, the dwarves of Khazad-dûm have left their mountain halls, their ancient weapons forged anew for battle. With war drums echoing across the lands, their armies march relentlessly toward your dread citadel, their fury unmatched.
+&lt;div class=&quot;passage-container dwarven-siege-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Siege of Herumor&#39;s Citadel&lt;/h1&gt;
+    &lt;/div&gt;
 
-Herumor stands at the heart of his dark fortress, feeling the weight of the One Ring on his finger. 
+    &lt;p&gt;Inside the dark walls of his citadel, Herumor watches as the dwarven hosts lay siege to his stronghold. The defenses hold, but the relentless assault takes its toll.&lt;/p&gt;
 
-The dwarves, though few in number, are formidable and determined. 
-They seek to end his dark reign. &quot;The question now is how to face them.&quot;
+    &lt;p&gt;Finally, a massive artillery bolt slams into the gates, causing them to splinter. The dwarves, undeterred, rush through the breach.&lt;/p&gt;
 
-[[1) Meet them in the open field: //Let your might and the power of the Ring shine before all. Crush the dwarves where all can see, and show the world that no army, no matter how ancient, can challenge your dominion.// -&gt;Meet the dwarves]]
-[[2) Wait for them in your citadel: //«The walls of your citadel are strong, and the power of the Ring is with you. Lure the dwarves into your trap, let them break upon your defenses, and make their assault a lesson in futility.»// -&gt;Wait for the dwarves]]</tw-passagedata><tw-passagedata pid="70" name="meet the king" tags="" position="2275,3500" size="100,100">Galadriel, swayed by the Ring’s dark whispers, travels alone to meet the High King of Khazad-dûm. 
-Her solitude makes her vulnerable, and as she approaches the meeting, the overwhelming influence of the Ring takes its toll on her mind.
+    &lt;p&gt;Herumor surveys the battlefield, weighing his options as the enemy closes in.&lt;/p&gt;
 
-Upon her arrival, the dwarven host quickly seizes upon her weakened state. 
-They recognize the power of the One Ring and, with swift and brutal efficiency, disarm her. The once-proud Lady of Light is rendered powerless as the dwarves claim the Ring for themselves.
+    [[1) Urge Herumor to charge the dwarves: //«Lead the charge yourself, Herumor. Crush their assault with your own hand.»// -&gt;Go into the battle]] 
+    [[2) Help Herumor by boosting his soldiers with Sauron’s dark power: //«Channel the dark powers of Sauron to strengthen your troops. Let the defenders hold strong.»// -&gt;Keep the distance]]
+&lt;/div&gt;
 
-The Ring’s power proves too great even for the dwarven blacksmiths to destroy. Despite their efforts, they cannot break it. Instead, they take the Ring away, hiding it from the world and ensuring it will never be easily found again.
-Galadriel, now a hollow and defeated figure, is held captive by the dwarves.
-[[Ending: Galadriel as a prisoner&lt;-]]</tw-passagedata><tw-passagedata pid="71" name="remain hidden" tags="Episodes" position="300,1000" size="200,100">&quot;Episode 1&quot;
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="66" name="What will come..." tags="ENDINGS" position="1600,4050" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-[[Finding someone]]</tw-passagedata></tw-storydata>
+&lt;div class=&quot;passage-container herumor-throne-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Return of Sauron&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Herumor&#39;s vision is clear: the return of Sauron is imminent. The dark lord’s throne will be restored, and the full might of his empire will rise once more. The foundations are laid for a new era of tyranny and fear.&lt;/p&gt;
+    
+    &lt;p&gt;THE END&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="67" name="Would Galadriel be able to hold off the corruption?" tags="Episodes" position="2200,2950" size="200,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container episode-2-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Episode 2&lt;/h1&gt;
+    &lt;/div&gt;
+
+    [[New Light Owner]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="68" name="corrupt her" tags="" position="2400,3300" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container king-conflict-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Conflict Begins&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;The High King of Khazad-dûm, enraged by Galadriel’s public insult, storms out of the grand hall, his face set in a grim mask of vengeance. His departure marks the beginning of a new chapter of conflict. Soon, news spreads that the dwarven armies are mustering, preparing to march upon Lindon in a quest for retribution.&lt;/p&gt;
+    
+    &lt;p&gt;The shadow of the One Ring’s influence now weighs heavily on Galadriel. The choices she makes next will determine how the impending conflict unfolds.&lt;/p&gt;
+
+    [[1) Push Galadriel into going alone to meet with the King: //Encourage Galadriel to confront the High King personally, without the support of her armies. Let the Ring’s influence lead her to believe that her personal presence and apology might mend the rift, even as it places her in a vulnerable position and exposes her to further dangers.// -&gt;meet the king]]
+
+    [[2) Have her take her armies with her: //Advise Galadriel to bring her full military strength when she goes to meet with the High King. This approach aims to show her power and preparedness, potentially deterring further aggression from the dwarves while still allowing her to seek a resolution to the conflict.// -&gt;Take up the army]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="69" name="ignore both" tags="" position="1900,3325" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container herumor-dwarves-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The Dwarves&#39; March&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;The reign of Herumor, feared throughout Middle-earth, now faces a new threat.&lt;/p&gt;
+    &lt;p&gt;For the first time in millennia, the dwarves of Khazad-dûm have left their mountain halls, their ancient weapons forged anew for battle. War drums echo as their armies march toward your dread citadel.&lt;/p&gt;
+    &lt;p&gt;Herumor stands in his fortress, feeling the weight of the One Ring. The dwarves, though few, are formidable and seek to end his reign.&lt;/p&gt;
+    &lt;p&gt;&quot;The question now is how to face them.&quot;&lt;/p&gt;
+
+    [[1) Meet them in the open field: //Let your might and the power of the Ring shine before all. Crush the dwarves where all can see, and show the world that no army, no matter how ancient, can challenge your dominion.// -&gt;Meet the dwarves]]  
+    [[2) Wait for them in your citadel: //The walls of your citadel are strong, and the power of the Ring is with you. Lure the dwarves into your trap, let them break upon your defenses, and make their assault a lesson in futility.// -&gt;Wait for the dwarves]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="70" name="meet the king" tags="" position="2275,3500" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;passage-container galadriel-prisoner-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Galadriel as a Prisoner&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Galadriel, swayed by the Ring’s dark whispers, travels alone to meet the High King of Khazad-dûm. Her solitude makes her vulnerable, and as she approaches the meeting, the overwhelming influence of the Ring takes its toll on her mind.&lt;/p&gt;
+
+    &lt;p&gt;Upon her arrival, the dwarven host quickly seizes upon her weakened state. They recognize the power of the One Ring and, with swift and brutal efficiency, disarm her. The once-proud Lady of Light is rendered powerless as the dwarves claim the Ring for themselves.&lt;/p&gt;
+
+    &lt;p&gt;The Ring’s power proves too great even for the dwarven blacksmiths to destroy. Despite their efforts, they cannot break it. Instead, they take the Ring away, hiding it from the world and ensuring it will never be easily found again. Galadriel, now a hollow and defeated figure, is held captive by the dwarves.&lt;/p&gt;
+
+    [[Ending: Galadriel as a prisoner&lt;-]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="71" name="remain hidden" tags="Episodes" position="300,1000" size="200,100">&lt;div class=&quot;passage-container episode1-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;Episode 1&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;[[Finding someone]]&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
