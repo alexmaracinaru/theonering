@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The 1 Ring.</tw-noscript></noscript></tw-story>
-<tw-storydata name="The 1 Ring" startnode="39" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="6A3D4F04-6D0E-465F-9184-32442214FFE1" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+<tw-storydata name="The 1 Ring" startnode="39" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="6A3D4F04-6D0E-465F-9184-32442214FFE1" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @font-face {
     font-family: 'RingbearerMedium';
     src: url('https://alexmaracinaru.github.io/theonering/fonts/RingbearerMedium-51mgZ.ttf') format('truetype');
@@ -135,6 +135,9 @@ audio::-webkit-media-controls-time-remaining-display {
     z-index: -1;
 }
 
+.passage-container.battlefield-bg {
+    background-image: url("https://alexmaracinaru.github.io/theonering/media/battlefield.jpg");
+}
 
 .galadriel-dark-queen-bg {
     background-image: url("https://alexmaracinaru.github.io/theonering/media/galadriel-dark-queen-bg.jpg");
@@ -605,7 +608,7 @@ tw-link:hover {
     
     &lt;p&gt;Gollum dies and the Ring gets lost in the chaos of battle. Allow Gollum’s death to mark the end of his journey and the Ring’s loss. The Ring is now hidden in the turmoil, awaiting the next opportunity for discovery.&lt;/p&gt;
 
-    [[-&gt;Ending: Lost again]]
+    [[Ending: Lost again]]
 &lt;/div&gt;
 &lt;audio id=&quot;background-audio&quot; controls&gt;
     &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
@@ -995,17 +998,34 @@ tw-link:hover {
     &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
     Your browser does not support the audio element.
 &lt;/audio&gt;
-</tw-passagedata><tw-passagedata pid="24" name="Fight against her" tags="" position="1825,2275" size="100,100">The battlefield is a chaos of steel and sorcery.
+</tw-passagedata><tw-passagedata pid="24" name="Fight against her" tags="" position="1825,2275" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
+&lt;/div&gt;
 
-The Black Númenóreans and the Elves of Lindon are locked in a brutal struggle. Herumor, fueled by your influence, cuts through the ranks of the Elven warriors, his power undeniable. His army follows in his wake, pushing the Elves back—but it is not enough to stop their relentless assault.
+&lt;div class=&quot;passage-container battlefield-bg&quot;&gt;
+    &lt;div class=&quot;header-container&quot;&gt;
+        &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/gate.png&quot; alt=&quot;Gate Image&quot;&gt;
+        &lt;h1&gt;The battlefield is a chaos of steel and sorcery&lt;/h1&gt;
+    &lt;/div&gt;
 
-At last, Herumor breaks through the Elven lines and stands face to face with Galadriel. The air crackles with tension as the two warriors prepare for the final confrontation. Galadriel’s eyes burn with ancient fury, her power radiating like a star. Herumor, though formidable, knows he faces a foe beyond any mortal.
+    &lt;p&gt;The Black Númenóreans and the Elves of Lindon are locked in a brutal struggle. Herumor, fueled by your influence, cuts through the ranks of the Elven warriors, his power undeniable. His army follows in his wake, pushing the Elves back—but it is not enough to stop their relentless assault.&lt;/p&gt;
 
-The outcome of this battle could change everything. 
-&quot;Will you lend your strength to Herumor, guiding him to victory, or will you weaken him, ensuring that Galadriel claims his life and ends his dark reign?&quot;
+    &lt;p&gt;At last, Herumor breaks through the Elven lines and stands face to face with Galadriel. The air crackles with tension as the two warriors prepare for the final confrontation. Galadriel’s eyes burn with ancient fury, her power radiating like a star. Herumor, though formidable, knows he faces a foe beyond any mortal.&lt;/p&gt;
 
-[[1) Strengthen Herumor with your power, enabling him to overpower Galadriel and claim victory over the Elves. //Lend him your strength. Let Herumor rise as the conqueror of the Firstborn, and watch as the Elves crumble before him.// -&gt;Galadriel loses]]
-[[2) Allow Herumor to falter in the heat of battle, paving the way for Galadriel to strike him down. His fall could shift the tides of power. //Let him fall. Galadriel’s victory will be the end of Herumor, but the beginning of a new chapter for you.// -&gt;Galadriel wins]]</tw-passagedata><tw-passagedata pid="25" name="Finding someone" tags="" position="700,1100" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
+    &lt;p&gt;The outcome of this battle could change everything.&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Will you lend your strength to Herumor, guiding him to victory, or will you weaken him, ensuring that Galadriel claims his life and ends his dark reign?&lt;/em&gt;&lt;/p&gt;
+
+    [[1) Strengthen Herumor with your power, enabling him to overpower Galadriel and claim victory over the Elves. //Lend him your strength. Let Herumor rise as the conqueror of the Firstborn, and watch as the Elves crumble before him.// -&gt;Galadriel loses]]  
+    
+    [[2) Allow Herumor to falter in the heat of battle, paving the way for Galadriel to strike him down. His fall could shift the tides of power. //Let him fall. Galadriel’s victory will be the end of Herumor, but the beginning of a new chapter for you.// -&gt;Galadriel wins]]
+&lt;/div&gt;
+
+&lt;audio id=&quot;background-audio&quot; controls&gt;
+    &lt;source src=&quot;https://alexmaracinaru.github.io/theonering/media/RestOfGame.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="25" name="Finding someone" tags="" position="700,1100" size="100,100">&lt;div class=&quot;tw-story-mod tw-story-mod-aw&quot;&gt;
     &lt;img src=&quot;https://alexmaracinaru.github.io/theonering/media/8g3GyAF.jpeg&quot; alt=&quot;Intro image&quot;&gt;
 &lt;/div&gt;
 
